@@ -1,0 +1,22 @@
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 43rem;
+	height: 46rem;
+	border-radius: 20rem;
+	border-width: 3px;
+	border-style: solid;
+	border-color: #fff;
+	font-size: 24rem;
+	font-weight: bold;
+	line-height: 1;
+	
+	&__arrow {
+		margin-left: 40rem;
+		fill:#fff;
+		width: 83rem;
+		min-width: 83rem;
+		height: 16rem;
+	}
+}

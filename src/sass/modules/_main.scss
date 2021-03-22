@@ -1,0 +1,67 @@
+.main {
+	display: flex;
+	padding: 100rem 0;
+	align-items: center;
+	min-height: 599rem;
+	background: url(/img/main_bg.jpg) center no-repeat;
+	color: #fff;
+	&__btn {
+		margin-top: 16rem;
+		width: 100%;
+		max-width: 409rem;
+	}
+	
+	.visible-tablet {
+		display: none;
+	}
+	&__swipe {
+		margin-top: 105rem;
+		&-hand {
+			fill: #fff;
+			width: 45rem;
+			height: 45rem;
+			margin: auto;
+		}
+		&-arrow {
+			width: 16rem;
+			height: 61rem;
+			fill: #fff;
+			margin: 5rem auto 0 auto;
+		}
+		&-text {
+			margin-top: 5rem;
+		}
+	}
+	
+	@include max-screen($small_tablet) {
+		text-align: center;
+		display: block;
+		padding: 85rem 0 80rem 0;
+		background-size: auto 100%!important;
+		min-height: inherit;
+		.hidden-tablet {
+			display: none;
+		}
+		.visible-tablet {
+			display: block;
+		}
+	}
+	
+	@include max-screen($small_mobile) {
+		padding: 85rem 0 15rem 0;
+		
+		&__desc {
+			margin-top: 5rem;
+			br {
+				display: none;
+			}
+		}
+		
+		&__swipe {
+			margin-top: 185rem;
+			&-text {
+				font-size: 18rem;
+			}
+		}
+	}
+}

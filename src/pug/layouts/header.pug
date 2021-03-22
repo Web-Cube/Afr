@@ -1,0 +1,52 @@
++b.HEADER.header
+	+e.wrap.wrap
+		+e.row.flex._vertical._justify
+			+e.search-btn.visible-mobile.js-search-open
+				+icon('search')
+			+e.A.logo(href="/main.html")
+				img(src="/img/logo_black.png")
+			+e.UL.nav.hidden-tablet
+				+e.LI.nav-item
+					+e.A.nav-link.is-active(href="#") News
+				+e.LI.nav-item
+					+e.A.nav-link(href="#") Interview
+				+e.LI.nav-item
+					+e.A.nav-link(href="#") Guidance
+				+e.LI.nav-item
+					+e.A.nav-link(href="#") Discussion
+				+e.LI.nav-item
+					+e.A.nav-link(href="#") Contact Us
+			+e.right
+				+e.styles.hidden-tablet
+					+e.A.style.is-active(href="#")
+						+icon('sun')
+					+e.A.style(href="#")
+						+icon('moon')
+				+e.lang.js-select.hidden-tablet
+					+e.INPUT.input(type="hidden")
+					+e.lang-head.js-select-head
+						+e.lang-arrow
+							+icon('downArrow')
+						+e.lang-label En
+					+e.lang-body
+						+e.lang-list
+							+e.A.lang-item(href="#") Fr
+							+e.A.lang-item(href="#") Ua
+							+e.A.lang-item(href="#") Ru
+				//+e.A.user.is-active(href="#")
+					+icon('user')
+				+e.A.user.hidden-tablet(href="#")
+					+icon('user')
+				+e.search-form.search-form__.hidden-mobile
+					+e.field.field__
+						+e.INPUT.input(type="text", name="search" placeholder="Search (enter your search term or hashtag)")
+					+e.BUTTON.btn
+						+icon('search')
+				+e.burger
+					+icon('menu')
+	+e.search-mobile.visible-mobile.js-search.search-mobile__
+		+e.close.js-search-close
+			+icon('close')
+		+e.INPUT.input(type="text" name="search" placeholder="Search (enter your search term or hashtag)")
+		+e.BUTTON.btn
+			+icon('search')

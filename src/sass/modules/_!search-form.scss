@@ -1,0 +1,18 @@
+.search-form {
+	position: relative;
+	.field {
+		&__input {
+			padding-left: 40rem;
+		}
+	}
+	&__btn {
+		width: 20rem;
+		height: 19rem;
+		background: none;
+		border: 0;
+		cursor: pointer;
+		position: absolute;
+		left: 12rem;
+		top: 3rem;
+	}
+}

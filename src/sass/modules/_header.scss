@@ -1,0 +1,192 @@
+.header {
+	padding: 40rem 0;
+	position: relative;
+	&__logo {
+		display: block;
+		width: 145rem;
+	}
+	
+	&__nav {
+		display: flex;
+		align-items: center;
+		list-style: none;
+		
+		&-item {
+			&:not(:last-child) {
+				margin-right: 20rem;
+			}
+		}
+		&-link {
+			display: inline-flex;
+			position: relative;
+			padding-bottom: 2rem;
+			margin-top: 2rem;
+			&.is-active {
+				font-weight: bold;
+				&:after {
+					content: '';
+					display: block;
+					width: 100%;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					height: 2px;
+					background: $default;
+				}
+			}
+		}
+	}
+	
+	&__styles {
+		display: flex;
+		align-items: center;
+	}
+	
+	&__style {
+		width: 24rem;
+		height: 24rem;
+		fill: $gray;
+		margin-right: 50rem;
+		&:not(:last-child) {
+			margin-right: 10rem;
+		}
+		&.is-active {
+			fill: $default;
+		}
+	}
+	
+	&__right {
+		display: flex;
+		align-items: center;
+	}
+	
+	&__lang {
+		width: 60rem;
+		font-weight: bold;
+		cursor: pointer;
+		position: relative;
+		margin-top: -10rem;
+		margin-right: 50rem;
+		&-head {
+			display: flex;
+			align-items: center;
+			padding: 10rem 8rem 0 3rem;
+		}
+		&-arrow {
+			width: 18rem;
+			min-width: 18rem;
+			height: 10rem;
+			stroke: $default;
+			margin-right: 9rem;
+			transition: ease .2s;
+		}
+		
+		&-body {
+			position: absolute;
+			top: 100%;
+			border-top: 1px solid $default;
+			width: 100%;
+			padding-bottom: 9rem;
+			overflow: hidden;
+			visibility: hidden;
+			opacity: 0;
+			transition: ease .2s;
+		}
+		&-item {
+			display: inline-flex;
+			align-items: center;
+			width: 100%;
+			height: 21rem;
+			color: $gray;
+			border-bottom: 1px solid $gray;
+			padding-left: 30rem;
+			&:hover {
+				border-bottom-color: $default;
+				color: $default;
+			}
+		}
+		&.is-active {
+			.header {
+				&__lang {
+					&-head {
+						background: #fff;
+						border-radius: 20rem 20rem 0 0;
+						box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+					}
+					&-body {
+						background: #fff;
+						border-radius: 0 0 20rem 20rem;
+						box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+						visibility: visible;
+						opacity: 1;
+					}
+					&-arrow {
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+	}
+	
+	&__user {
+		svg {
+			width: 24rem;
+			height: 24rem;
+		}
+		&.is-active {
+			width: 40rem;
+			height: 40rem;
+			border: 1px solid $default;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 100%;
+			padding-bottom: 2rem;
+		}
+	}
+	
+	&__burger {
+		width: 12rem;
+		height: 38rem;
+		fill: $default;
+		margin-left: 11rem;
+		display: none;
+	}
+	
+	.visible-tablet, .visible-mobile {
+		display: none;
+	}
+	
+	&__search-form {
+		width: 450rem;
+	}
+	&__search-btn  {
+		width: 27rem;
+		height: 27rem;
+		fill: $default;
+	}
+	
+	@include max-screen($small_tablet) {
+		padding: 25rem 0;
+		&__burger {
+			display: block;
+		}
+		
+		.hidden-tablet {
+			display: none;
+		}
+		.visible-tablet {
+			display: block;
+		}
+	}
+	
+	@include max-screen($small_mobile) {
+		padding: 12rem 0;
+		.visible-mobile {
+			display: block;
+		}
+		.hidden-mobile {
+			display: none;
+		}
+	}
+}

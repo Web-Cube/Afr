@@ -1,0 +1,17 @@
+.field {
+	position: relative;
+	&__input {
+		font-size: 14rem;
+		line-height: 16/14*1;
+		padding: 0 12rem;
+		height: 24rem;
+		border-radius: 20rem;
+		border: 1px solid $default;
+		display: block;
+		width: 100%;
+		color: $default;
+		&::placeholder {
+			color: $gray;
+		}
+	}
+}

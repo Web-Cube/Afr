@@ -1,0 +1,58 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Main';
+
+block content
+	+b.main
+		+e.wrap.wrap
+			+e.content
+				+e.title.h1
+					| Afr.ua-new format 
+					br
+					| for breaking news
+				+e.desc.p
+					| New information portal for foreigners about life in Ukraine, 
+					br
+					| latest news,useful articles, blogs and much more...
+				+e.A.btn.btn__.hidden-tablet(href="#")
+					+e.text Go to news
+					+e.arrow
+						+icon('longArrow')
+			+e.swipe.visible-tablet
+				+e.swipe-hand
+					+icon('swipeFinger')
+				+e.swipe-arrow
+					+icon('swipeArrow')
+				+e.swipe-text
+					strong Swipe to news
+	+b.nav
+		+e.wrap.wrap
+			+e.row.flex._justify
+				+e.left
+					+e.UL.list
+						+e.LI.item
+							+e.A.link.is-active(href="#") Hot News
+						+e.LI.item
+							+e.A.link(href="#") Life
+						+e.LI.item
+							+e.A.link(href="#") Showbiz
+						+e.LI.item
+							+e.A.link(href="#") Music
+						+e.LI.item
+							+e.A.link(href="#") Sport
+						+e.LI.item
+							+e.A.link(href="#") Health
+						+e.LI.item
+							+e.A.link(href="#") Politics
+						+e.LI.item
+							+e.A.link(href="#") Economics
+						+e.LI.item
+							+e.A.link(href="#") Others
+				+e.right
+					+e.search-form.search-form__.hidden-mobile
+						+e.field.field__
+							+e.INPUT.input(type="text", name="search" placeholder="Search (enter your search term or hashtag)")
+						+e.BUTTON.btn
+							+icon('search')
+			+e.bottom
