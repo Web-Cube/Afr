@@ -77,13 +77,19 @@
 	}
 	
 	@include max-screen($small_mobile) {
+		padding: 11rem 0 0 0;
 		&__row {
 			display: none;
-			padding: 11rem 0 25rem 0;
 		}
 		&__bottom {
 			display: flex;
 			justify-content: space-between;
+		}
+		&__select {
+			width: 48%;
+		}
+		.select__label {
+			font-weight: bold;
 		}
 	}
 }

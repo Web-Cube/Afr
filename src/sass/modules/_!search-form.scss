@@ -3,6 +3,7 @@
 	.field {
 		&__input {
 			padding-left: 40rem;
+			background: none;
 		}
 	}
 	&__btn {
@@ -14,5 +15,6 @@
 		position: absolute;
 		left: 12rem;
 		top: 3rem;
+		fill: $default;
 	}
 }

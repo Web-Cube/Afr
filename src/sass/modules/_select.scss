@@ -1,0 +1,70 @@
+.select {
+	display: inline-flex;
+	font-size: 14rem;
+	line-height: 16/14*1;
+	color: $default;
+	position: relative;
+	
+	&.is-active {
+		z-index: 200;
+		.select {
+			&__arrow {
+				transform: rotate(-180deg);
+			}
+			&__body {
+				display: block;
+			}
+		}
+	}
+	
+	&__head {
+		display: flex;
+		padding: 0 12rem;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		z-index: 2;
+		border: 1px solid $default;
+		height: 24rem;
+		border-radius: 20rem;
+		background: $base;
+		width: 100%;
+	}
+	
+	&__body {
+		position: absolute;
+		z-index: 1;
+		top: 12rem;
+		background: $base;
+		left: 0;
+		width: 100%;
+		border: 1px solid $default;
+		padding: 12rem 12rem 10rem 12rem;
+		border-radius: 0 0 20rem 20rem;
+		display: none;
+	}
+	
+	&__arrow {
+		width: 18rem;
+		height: 9rem;
+		min-width: 18rem;
+		margin-left: 12rem;
+		stroke: $default;
+		transition: ease .2s;
+	}
+	
+	&__label {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: 100%;
+	}
+	
+	&__item {
+		color: $gray;
+		transition: ease .2s;
+		&:hover, &.is-active {
+			color: $default;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+.more {
+	display: inline-flex;
+	align-items: center;
+	color: $default;
+	font-weight: bold;
+	font-size: 14rem;
+	line-height: 16/14*1;
+	&__text {
+		margin-right: 4rem;
+	}
+	&__arrow {
+		width: 33rem;
+		height: 8rem;
+		margin-top: 2rem;
+		fill: $default;
+	}
+	&:hover {
+		text-decoration: underline;
+	}
+}

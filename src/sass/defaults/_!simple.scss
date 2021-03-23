@@ -55,7 +55,7 @@ body {
 	font-size: 18rem;
 	line-height: 21/18*1;
 	color: $default;
-	background: #fff;
+	background: $base;
 	&.js-lock {
 		overflow-x: hidden;
 		overflow-y: scroll;

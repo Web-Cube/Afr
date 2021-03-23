@@ -1,1 +1,37 @@
+include subscribe
 +b.FOOTER.footer
+	+e.wrap.wrap
+		+e.row.flex._justify._vertical
+			+e.A.logo(href="/main.html")
+				img(src="/img/logo_black.png")
+			+e.UL.nav.hidden-tablet
+				+e.LI.nav-item
+					+e.A.nav-link.is-active(href="#") News
+				+e.LI.nav-item
+					+e.A.nav-link(href="#") Interview
+				+e.LI.nav-item
+					+e.A.nav-link(href="#") Guidance
+				+e.LI.nav-item
+					+e.A.nav-link(href="#") Discussion
+				+e.LI.nav-item
+					+e.A.nav-link(href="#") Contact Us
+			+e.contact
+				+e.contact-item
+					+e.A.contact-link(href="tel:+380881111111")
+						+e.contact-icon
+							+icon('iphone')
+						+e.contact-text +38 (088) - 11 - 11 - 111
+				+e.contact-item
+					+e.A.contact-link(href="mailto:your@mail.com")
+						+e.contact-icon
+							+icon('email')
+						+e.contact-text your@mail.com
+			+e.social.social__
+				+e.A.item(href="#")
+					+icon('instagram')
+				+e.A.item(href="#")
+					+icon('fb')
+				+e.A.item(href="#")
+					+icon('twitter')
+				+e.A.item(href="#")
+					+icon('youtube')

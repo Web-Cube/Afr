@@ -57,7 +57,7 @@ html(class=html.classList)&attributes(html.attrs)
 			script.
 				function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
 		block head-end
-	body(class=body.classList)&attributes(body.attrs)
+	body#top(class=body.classList)&attributes(body.attrs)
 		block body-start
 
 		block header

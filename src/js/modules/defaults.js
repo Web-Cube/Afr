@@ -7,6 +7,20 @@ var defaults = {
 		$('.js-search-close').click(function(){
 			$('.js-search').removeClass('is-active');
 		});
+		
+		$(".js-scroll-to").click(function() {
+			var attr_href = $(this).attr("href");
+			var data_href = $(this).data("href");
+			if ( data_href ) {
+				attr_href = data_href;
+			}
+			$("html, body").animate({
+				scrollTop: $(attr_href).offset().top + "px"
+			}, {
+				duration: 1000
+			});
+			return false;
+		});
 	},
 	
 	selectToggle: (e) => {
@@ -39,6 +53,20 @@ var defaults = {
 		return false;
 			
 	},
+	
+	selectChange: (e) => {
+		
+		let item = $(e.currentTarget).closest('.js-select');
+		let value = $(e.currentTarget).data('value');
+		
+		item.removeClass('is-active');
+		
+		item.find('.js-select-input').val(value);
+		item.find('.js-select-label').text(value);
+		item.find('.js-select-item.is-active').removeClass('is-active');
+		$(e.currentTarget).addClass('is-active');
+			
+	},
 
 	init: () => {
 
@@ -47,6 +75,8 @@ var defaults = {
 		$(document).on('click', '.js-select-head', defaults.selectToggle);
 		
 		$(document).on('click', '.js-select-close', defaults.selectClose);
+		
+		$(document).on('click', '.js-select-item', defaults.selectChange);
 		
 		$(document).on('click', defaults.selectOutside);
 

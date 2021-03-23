@@ -11,6 +11,18 @@
 	font-size: 24rem;
 	font-weight: bold;
 	line-height: 1;
+	font-family: 'Ubuntu';
+	transition: ease .2s;
+	
+	&:hover {
+		background: #fff;
+		color: #000;
+		.btn {
+			&__arrow {
+				fill: #000;
+			}
+		}
+	}
 	
 	&__arrow {
 		margin-left: 40rem;
@@ -18,5 +30,38 @@
 		width: 83rem;
 		min-width: 83rem;
 		height: 16rem;
+		transition: ease .2s;
+	}
+	
+	&_black {
+		border-color: $default;
+		.btn {
+			&__arrow {
+				fill: $default;
+			}
+		}
+		&:hover {
+			background: $default;
+			color: $base;
+			.btn {
+				&__arrow {
+					fill: $base;
+				}
+			}
+		}
+	}
+	
+	@include max-screen($small_mobile) {
+		height: 26rem;
+		font-size: 14rem;
+		line-height: 16/14*1;
+		border-width: 1px;
+		padding: 0 22rem;
+		&__arrow {
+			margin-left: 38rem;
+			width: 66rem;
+			min-width: 66rem;
+			height: 12rem;
+		}
 	}
 }

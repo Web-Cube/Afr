@@ -23,6 +23,7 @@
 			margin-top: 2rem;
 			&.is-active {
 				font-weight: bold;
+				text-decoration: none;
 				&:after {
 					content: '';
 					display: block;
@@ -33,6 +34,9 @@
 					height: 2px;
 					background: $default;
 				}
+			}
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -84,7 +88,7 @@
 		&-body {
 			position: absolute;
 			top: 100%;
-			border-top: 1px solid $default;
+			border-top: 1px solid #000;
 			width: 100%;
 			padding-bottom: 9rem;
 			overflow: hidden;
@@ -101,14 +105,15 @@
 			border-bottom: 1px solid $gray;
 			padding-left: 30rem;
 			&:hover {
-				border-bottom-color: $default;
-				color: $default;
+				border-bottom-color: #000;
+				color: #000;
 			}
 		}
 		&.is-active {
 			.header {
 				&__lang {
 					&-head {
+						color: #000;
 						background: #fff;
 						border-radius: 20rem 20rem 0 0;
 						box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
@@ -122,6 +127,7 @@
 					}
 					&-arrow {
 						transform: rotate(180deg);
+						stroke: #000;
 					}
 				}
 			}
@@ -187,6 +193,10 @@
 		}
 		.hidden-mobile {
 			display: none;
+		}
+		
+		&__search-form {
+			display: none!important;
 		}
 	}
 }
