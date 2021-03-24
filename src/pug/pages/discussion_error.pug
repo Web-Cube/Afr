@@ -1,0 +1,40 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Discussion_none';
+
+block content
+	+b.head-page
+		+e.wrap.wrap
+			+e.row.flex
+				+e.column._left.is-discussion
+					+e.H1.title.h1 Discussion
+					+e.text.p Find the answer to any question
+				+e.column._right.is-discussion
+					+e.top.is-discussion
+						+e.search-form.search-form__.is-discussion
+							+e.field.field__
+								+e.INPUT.input(type="text", name="search" placeholder="Search (enter your search term or hashtag)")
+							+e.BUTTON.btn
+								+icon('search')
+						+e.btn-wrap
+							+e.A.btn-filter.button-filter__(href="#")
+								+e.text Filter
+								+e.icon
+									+icon('filter')
+							+e.A.btn.button__(href="#") Ask a question
+	+b.discussion
+		+e.wrap.wrap
+			+e.error
+				+e.error-wrap
+					+e.H2.error-title.h2
+						| This section is available only to registered users
+					+e.error-text
+						a(href="#") Log In 
+						| to your account or 
+						a(href="#") Sign Up 
+						| to view and participate in discussions
+					+e.A.error-btn.button__(href="#") Log in
+					+e.error-bottom
+						| Don't have an account? 
+						a(href="#") Create

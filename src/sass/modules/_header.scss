@@ -1,6 +1,7 @@
 .header {
 	padding: 40rem 0;
 	position: relative;
+	border-bottom: 1px solid $default;
 	&__logo {
 		display: block;
 		width: 145rem;
@@ -23,7 +24,7 @@
 			margin-top: 2rem;
 			&.is-active {
 				font-weight: bold;
-				text-decoration: none;
+				text-decoration: none!important;
 				&:after {
 					content: '';
 					display: block;
@@ -188,6 +189,7 @@
 	
 	@include max-screen($small_mobile) {
 		padding: 12rem 0;
+		border-bottom: 0;
 		.visible-mobile {
 			display: block;
 		}

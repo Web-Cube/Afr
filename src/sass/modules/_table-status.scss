@@ -1,0 +1,123 @@
+.table-status {
+	font-size: 14rem;
+	line-height: 16/14*1;
+	font-weight: 500;
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		font-size: 18rem;
+		line-height: 21/18*1;
+		padding: 1rem 0 10rem 0;
+		border-bottom: 1px solid $default;
+	}
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20rem 0;
+		border-bottom: 1px solid $default;
+	}
+	
+	&__column {
+		&:first-child {
+			width: 5%;
+			text-align: center;
+		}
+		&:nth-child(2) {
+			width: 23%;
+		}
+		&:nth-child(3) {
+			width: 24.3%;
+		}
+		&:nth-child(4) {
+			width: 6.5%;
+			text-align: center;
+		}
+		&:nth-child(5) {
+			width: 10.5%;
+			text-align: center;
+		}
+		&:nth-child(6) {
+			width: 15%;
+			text-align: center;
+		}
+	}
+	.hide-text {
+		display: none;
+	}
+	
+	&__author {
+		display: flex;
+		align-items: center;
+	}
+	
+	&__ava {
+		width: 85rem;
+		min-width: 85rem;
+		height: 85rem;
+		overflow: hidden;
+		position: relative;
+		border-radius: 100%;
+		margin-right: 8rem;
+	}
+	
+	@include max-screen($small_mobile) {
+		&__head {
+			display: none;
+		}
+		&__row {
+			padding: 20rem 8rem;
+			display: block;
+			position: relative;
+		}
+		&__author {
+			width: 64%;
+			border-right: 1px solid $default;
+			align-items: flex-start;
+			padding-bottom: 10rem;
+		}
+		&__column {
+			width: 100%!important;
+		}
+		&__ava {
+			margin-right: 10rem;
+		}
+		.hide-text {
+			display: block;
+		}
+		&__id {
+			position: absolute;
+			width: 36%;
+			text-align: center;
+			right: 0;
+			top: 20rem;
+			line-height: 1;
+		}
+		&__views {
+			position: absolute;
+			width: 36%;
+			text-align: center;
+			right: 0;
+			top: 56rem;
+			line-height: 1;
+		}
+		&__comments {
+			position: absolute;
+			width: 36%;
+			text-align: center;
+			right: 0;
+			top: 90rem;
+			line-height: 1;
+		}
+		
+		&__status {
+			position: absolute;
+			top: 90rem;
+			line-height: 1;
+			right: 36%;
+			padding-right: 10rem;
+			font-weight: bold;
+		}
+	}
+}

@@ -87,9 +87,19 @@
 		}
 		&__select {
 			width: 48%;
+			text-align: center;
 		}
-		.select__label {
-			font-weight: bold;
+		.select {
+			&__head {
+				padding-left: 20rem;
+			}
+			&__label {
+				font-weight: bold;
+			}
+			&__body {
+				padding-right: 20rem;
+				padding-left: 0;
+			}
 		}
 	}
 }

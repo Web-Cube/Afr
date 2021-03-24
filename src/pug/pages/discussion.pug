@@ -1,0 +1,228 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Discussion';
+
+block content
+	+b.head-page
+		+e.wrap.wrap
+			+e.row.flex
+				+e.column._left.is-discussion
+					+e.H1.title.h1 Discussion
+					+e.text.p Find the answer to any question
+				+e.column._right.is-discussion
+					+e.top.is-discussion
+						+e.search-form.search-form__.is-discussion
+							+e.field.field__
+								+e.INPUT.input(type="text", name="search" placeholder="Search (enter your search term or hashtag)")
+							+e.BUTTON.btn
+								+icon('search')
+						+e.btn-wrap
+							+e.A.btn-filter.button-filter__(href="#")
+								+e.text Filter
+								+e.icon
+									+icon('filter')
+							+e.A.btn.button__(href="#") Ask a question
+	+b.discussion
+		+e.wrap.wrap
+			+e.row
+				+e.column._left
+					+e.nav
+						+e.nav-box.is-active.js-toggle-item
+							+e.nav-head.js-toggle-head
+								+e.nav-label Topic
+								+e.nav-arrow
+									+icon('downArrow')
+							+e.nav-body.js-toggle-body(style="display:block")
+								+e.UL.nav-list
+									+e.LI.nav-item
+										+e.A.nav-link.is-active(href="#") All
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Automobile
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Business
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Documents
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Elrctronic
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Job
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Laws
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Life
+						+e.nav-box.js-toggle-item
+							+e.nav-head.js-toggle-head
+								+e.nav-label Language
+								+e.nav-arrow
+									+icon('downArrow')
+							+e.nav-body.js-toggle-body
+								+e.UL.nav-list
+									+e.LI.nav-item
+										+e.A.nav-link.is-active(href="#") All
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Automobile
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Business
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Documents
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Elrctronic
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Job
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Laws
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Life
+						+e.nav-box.js-toggle-item
+							+e.nav-head.js-toggle-head
+								+e.nav-label Answers
+								+e.nav-arrow
+									+icon('downArrow')
+							+e.nav-body.js-toggle-body
+								+e.UL.nav-list
+									+e.LI.nav-item
+										+e.A.nav-link.is-active(href="#") All
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Automobile
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Business
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Documents
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Elrctronic
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Job
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Laws
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Life
+						+e.nav-box.js-toggle-item
+							+e.nav-head.js-toggle-head
+								+e.nav-label Status
+								+e.nav-arrow
+									+icon('downArrow')
+							+e.nav-body.js-toggle-body
+								+e.UL.nav-list
+									+e.LI.nav-item
+										+e.A.nav-link.is-active(href="#") All
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Automobile
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Business
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Documents
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Elrctronic
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Job
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Laws
+									+e.LI.nav-item
+										+e.A.nav-link(href="#") Life
+				+e.column._right
+					+e.table.table-status__
+						+e.head
+							+e.column
+								strong Id
+							+e.column
+								strong Author
+							+e.column
+								strong Topic / question
+							+e.column
+								strong Views
+							+e.column
+								strong Comments
+							+e.column
+								strong Status
+						+e.body
+							+e.row
+								+e.column
+									+e.id
+										strong.hide-text Id
+										| 17385
+								+e.column
+									+e.author
+										+e.A.ava(href="#")
+											img.object-fit(src="/img/ava1.jpg")
+										+e.info
+											| Thomas Rickman 
+											br
+											| 27 years 
+											br
+											| Bolivia
+								+e.column
+									+e.topic
+										strong Documents: 
+										br
+										| How can I extend my visa without entering Ukraine
+								+e.column
+									+e.views
+										strong.hide-text Views
+										| 38
+								+e.column
+									+e.comments
+										strong.hide-text Comments
+										| 4
+								+e.column
+									+e.status Close for discussion
+							+e.row
+								+e.column
+									+e.id
+										strong.hide-text Id
+										| 17386
+								+e.column
+									+e.author
+										+e.A.ava(href="#")
+											img.object-fit(src="/img/ava2.jpg")
+										+e.info
+											| Marta Shultz
+											br
+											| 31 years 
+											br
+											| Germany
+								+e.column
+									+e.topic
+										strong Life: 
+										br
+										| Tell me a good fitness center in Odessa
+								+e.column
+									+e.views
+										strong.hide-text Views
+										| 126
+								+e.column
+									+e.comments
+										strong.hide-text Comments
+										| 31
+								+e.column
+									+e.status Open for discussion
+							+e.row
+								+e.column
+									+e.id
+										strong.hide-text Id
+										| 17386
+								+e.column
+									+e.author
+										+e.A.ava(href="#")
+											img.object-fit(src="/img/ava3.jpg")
+										+e.info
+											| Sarah Kopelman
+											br
+											| 36 years 
+											br
+											| Israel
+								+e.column
+									+e.topic
+										strong Documents: 
+										br
+										| Help resolve the dispute with the bank! I need a good lawyer
+								+e.column
+									+e.views
+										strong.hide-text Views
+										| 126
+								+e.column
+									+e.comments
+										strong.hide-text Comments
+										| 31
+								+e.column
+									+e.status Open for discussion

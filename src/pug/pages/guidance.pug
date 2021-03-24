@@ -1,0 +1,301 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Guidance';
+
+block content
+	+b.head-page
+		+e.wrap.wrap
+			+e.row.flex
+				+e.column._left
+					+e.H1.title.h1 Guidance
+					+e.text.p Useful tips, life hacks, instructions 
+						br
+						| and much more
+				+e.column._right
+					+e.top
+						+e.search-form.search-form__.hidden-tablet
+							+e.field.field__
+								+e.INPUT.input(type="text", name="search" placeholder="Search (enter your search term or hashtag)")
+							+e.BUTTON.btn
+								+icon('search')
+					+e.bottom
+						+e.UL.nav
+							+e.LI.nav-item
+								+e.A.nav-link(href="#") All
+							+e.LI.nav-item
+								+e.A.nav-link(href="#") Useful
+							+e.LI.nav-item
+								+e.A.nav-link(href="#") Lifehacks
+							+e.LI.nav-item
+								+e.A.nav-link.is-active(href="#") Police
+							+e.LI.nav-item
+								+e.A.nav-link(href="#") Laws
+							+e.LI.nav-item
+								+e.A.nav-link(href="#") Job
+							+e.LI.nav-item
+								+e.A.nav-link(href="#") Others
+			+e.sort
+				+e.select.select__.js-select
+					+e.INPUT.input.js-select-input(type="hidden")
+					+e.head.js-select-head
+						+e.label.js-select-label Police
+						+e.arrow
+							+icon('downArrow')
+					+e.body
+						+e.list
+							+e.item.js-select-item(data-value="All") All
+							+e.item.js-select-item(data-value="Life story") Useful
+							+e.item.js-select-item(data-value="Artists") Lifehacks
+							+e.item.js-select-item.is-active(data-value="Celebrities") Police
+							+e.item.js-select-item(data-value="Reportage") Laws
+							+e.item.js-select-item(data-value="Special") Job
+							+e.item.js-select-item(data-value="Others") Others
+				+e.select.select__.js-select
+					+e.INPUT.input.js-select-input(type="hidden")
+					+e.head.js-select-head
+						+e.label.js-select-label by popularity
+						+e.arrow
+							+icon('downArrow')
+					+e.body
+						+e.list
+							+e.item.js-select-item.is-active(data-value="by popularity") by popularity
+							+e.item.js-select-item(data-value="by popularity") by popularity
+	+b.categories
+		+e.wrap.wrap
+			+e.category
+				+e.H3.title.h3 Life story
+				+e.post-box.post-box__
+					+e.row.flex
+						+e.column._left
+							+e.A.preview._big(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/police__img1.jpg")
+								+e.info
+									+e.top
+										+e.title.h2
+											| What to do if stopped by the police?
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+						+e.column._right
+							+e.A.preview._small(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/police__img2.jpg")
+								+e.info
+									+e.top
+										+e.title.h4
+											| How to write a police report correctly
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+							+e.A.preview._small(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/police__img3.jpg")
+								+e.info
+									+e.top
+										+e.title.h4
+											| For which you can be detained by the police in Ukraine
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+					+e.row.flex
+						+e.column._left
+							+e.A.preview._big(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/police__img4.jpg")
+								+e.info
+									+e.top
+										+e.title.h2
+											| Specificity of traffic rules in Ukraine
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+						+e.column._right
+							+e.A.preview._small(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/police__img5.jpg")
+								+e.info
+									+e.top
+										+e.title.h4
+											| Got an accident? Procedure. Police and insurance
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+							+e.A.preview._small(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/police__img6.jpg")
+								+e.info
+									+e.top
+										+e.title.h4
+											| How the police work in Ukraine
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+				+e.bottom
+					+e.A.btn.btn__._black(href="#")
+						+e.text Load more
+						+e.arrow
+							+icon('longArrow')

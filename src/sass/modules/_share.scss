@@ -6,6 +6,16 @@
 		&:not(:last-child) {
 			margin-right: 24rem;
 		}
+		&:hover {
+			.share {
+				&__icon {
+					fill: $default;
+				}
+				&__count {
+					color: $default;
+				}
+			}
+		}
 	}
 	&__icon {
 		width: 24rem;
@@ -13,6 +23,7 @@
 		margin: 0 auto;
 		display: block;
 		fill: $gray;
+		transition: ease .2s;
 		.icon-share {
 			width: 20rem;
 		}
@@ -22,6 +33,7 @@
 		line-height: 16/14*1;
 		font-weight: bold;
 		display: block;
+		transition: ease .2s;
 		color: $gray;
 		margin-top: 2rem;
 	}

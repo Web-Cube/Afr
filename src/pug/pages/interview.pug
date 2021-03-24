@@ -1,0 +1,436 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Interview';
+
+block content
+	+b.head-page
+		+e.wrap.wrap
+			+e.row.flex
+				+e.column._left
+					+e.H1.title.h1 Interview
+					+e.text.p Life stories, current information, facts 
+						br
+						| and much more
+				+e.column._right
+					+e.top
+						+e.search-form.search-form__.hidden-tablet
+							+e.field.field__
+								+e.INPUT.input(type="text", name="search" placeholder="Search (enter your search term or hashtag)")
+							+e.BUTTON.btn
+								+icon('search')
+					+e.bottom
+						+e.UL.nav
+							+e.LI.nav-item
+								+e.A.nav-link.is-active(href="#") All
+							+e.LI.nav-item
+								+e.A.nav-link(href="#") Life story
+							+e.LI.nav-item
+								+e.A.nav-link(href="#") Artists
+							+e.LI.nav-item
+								+e.A.nav-link(href="#") Celebrities
+							+e.LI.nav-item
+								+e.A.nav-link(href="#") Reportage
+							+e.LI.nav-item
+								+e.A.nav-link(href="#") Special
+							+e.LI.nav-item
+								+e.A.nav-link(href="#") Others
+						+e.UL.nav.hidden-tablet
+							+e.LI.nav-item
+								+e.A.nav-link.is-active(href="#") by popularity
+							+e.LI.nav-item
+								+e.A.nav-link(href="#") by date
+			+e.sort
+				+e.select.select__.js-select
+					+e.INPUT.input.js-select-input(type="hidden")
+					+e.head.js-select-head
+						+e.label.js-select-label All
+						+e.arrow
+							+icon('downArrow')
+					+e.body
+						+e.list
+							+e.item.js-select-item.is-active(data-value="All") All
+							+e.item.js-select-item(data-value="Life story") Life story
+							+e.item.js-select-item(data-value="Artists") Artists
+							+e.item.js-select-item(data-value="Celebrities") Celebrities
+							+e.item.js-select-item(data-value="Reportage") Reportage
+							+e.item.js-select-item(data-value="Special") Special
+							+e.item.js-select-item(data-value="Others") Others
+				+e.select.select__.js-select
+					+e.INPUT.input.js-select-input(type="hidden")
+					+e.head.js-select-head
+						+e.label.js-select-label by popularity
+						+e.arrow
+							+icon('downArrow')
+					+e.body
+						+e.list
+							+e.item.js-select-item.is-active(data-value="by popularity") by popularity
+							+e.item.js-select-item(data-value="by popularity") by popularity
+	+b.categories
+		+e.wrap.wrap
+			+e.category
+				+e.H3.title.h3 Police
+				+e.post-box.post-box__
+					+e.row.flex
+						+e.column._left
+							+e.A.preview._big(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/interview__img1.jpg")
+								+e.info
+									+e.top
+										+e.title.h2
+											| Stephen Adams: 5 years of life in Ukraine. Business and study
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+						+e.column._right
+							+e.A.preview._small(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/interview__img2.jpg")
+								+e.info
+									+e.top
+										+e.title.h4
+											| Marta Pirelli: the story of an Italian woman in Ukraine
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+							+e.A.preview._small(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/interview__img3.jpg")
+								+e.info
+									+e.top
+										+e.title.h4
+											| Study at a Ukrainian university without knowing the language
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+				+e.bottom
+					+e.A.btn.btn__._black(href="#")
+						+e.text Load more
+						+e.arrow
+							+icon('longArrow')
+			+e.category
+				+e.H3.title.h3 Artists
+				+e.post-box.post-box__
+					+e.row.flex
+						+e.column._left
+							+e.A.preview._big(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/interview__img4.jpg")
+								+e.info
+									+e.top
+										+e.title.h2
+											| Niletto: Path from poverty to stars
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+						+e.column._right
+							+e.A.preview._small(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/interview__img5.jpg")
+								+e.info
+									+e.top
+										+e.title.h4
+											| The history of the creation and disintegration of the group
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+							+e.A.preview._small(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/interview__img6.jpg")
+								+e.info
+									+e.top
+										+e.title.h4
+											| Morgenstern: history of success
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+				+e.bottom
+					+e.A.btn.btn__._black(href="#")
+						+e.text Load more
+						+e.arrow
+							+icon('longArrow')
+			+e.category
+				+e.H3.title.h3 Celebrities
+				+e.post-box.post-box__
+					+e.row.flex
+						+e.column._left
+							+e.A.preview._big(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/interview__img7.jpg")
+								+e.info
+									+e.top
+										+e.title.h2
+											| Jean Beleniuk: from sports to politics
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+						+e.column._right
+							+e.A.preview._small(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/interview__img8.jpg")
+								+e.info
+									+e.top
+										+e.title.h4
+											| Interview with Ukrainian dancer
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+							+e.A.preview._small(href="#")
+								+e.img
+									+e.img-wrap
+										img.object-fit(src="/img/interview__img9.jpg")
+								+e.info
+									+e.top
+										+e.title.h4
+											| 50 Cent: rapper's visit to Ukraine
+										+e.share.share__
+											+e.item
+												+e.icon
+													+icon('eye')
+												+e.count 1385
+											+e.item
+												+e.icon
+													+icon('like')
+												+e.count 1005
+											+e.item
+												+e.icon
+													+icon('share')
+												+e.count 380
+											+e.item
+												+e.icon
+													+icon('comment')
+												+e.count 96
+											+e.item
+												+e.icon
+													+icon('heart')
+									+e.bottom
+										+e.date
+											| 28/01/2021 
+											br
+											| 12:41
+										+e.more.more__
+											+e.text Read more
+											+e.arrow
+												+icon('longArrow')
+				+e.bottom
+					+e.A.btn.btn__._black(href="#")
+						+e.text Load more
+						+e.arrow
+							+icon('longArrow')

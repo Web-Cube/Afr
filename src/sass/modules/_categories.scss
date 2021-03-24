@@ -1,0 +1,33 @@
+.categories {
+	overflow: hidden;
+	padding-bottom: 20rem;
+	&__category {
+		margin-top: 20rem;
+	}
+	&__post-box {
+		margin-top: 11rem;
+	}
+	&__btn {
+		margin-top: 20rem;
+		width: 100%;
+		max-width: 410rem;
+	}
+	&__bottom {
+		text-align: center;
+	}
+	
+	@include max-screen($small_mobile) {
+		&__title {
+			text-align: center;
+		}
+		&__post-box {
+			margin-top: 0;
+		}
+		.post-box__preview {
+			margin-top: 20rem!important;
+		}
+		&__btn {
+			max-width: 260rem;
+		}
+	}
+}

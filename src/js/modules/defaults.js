@@ -67,6 +67,44 @@ var defaults = {
 		$(e.currentTarget).addClass('is-active');
 			
 	},
+	
+	toggle: (e) => {
+		
+		let item = $(e.currentTarget).closest('.js-toggle-item');
+			
+		if ( item.hasClass('is-active') ) {
+
+			item.removeClass('is-active');
+			item.find('.js-toggle-body').slideUp(200);
+		} else {
+
+			$('.js-toggle-item.is-active').removeClass('is-active');
+			$('.js-toggle-body:visible').slideUp(200);
+			item.find('.js-toggle-body').slideDown(200);
+			item.addClass('is-active');
+
+		}
+			
+	},
+	
+	mobileAccordion: (e) => {
+		
+		let item = $(e.currentTarget).parent();
+			
+		if ( item.hasClass('is-active') ) {
+
+			item.removeClass('is-active');
+			item.find('.js-accordion-body').slideUp(200);
+		} else {
+
+			$('.js-accordion-item.is-active').removeClass('is-active');
+			$('.js-accordion-body:visible').slideUp(200);
+			item.find('.js-accordion-body').slideDown(200);
+			item.addClass('is-active');
+
+		}
+			
+	},
 
 	init: () => {
 
@@ -79,6 +117,12 @@ var defaults = {
 		$(document).on('click', '.js-select-item', defaults.selectChange);
 		
 		$(document).on('click', defaults.selectOutside);
+		
+		$(document).on('click', '.js-toggle-head', defaults.toggle);
+		
+		if ( $(window).innerWidth() < 441 ) {
+			$(document).on('click', '.js-accordion-head', defaults.mobileAccordion);
+		}
 
 	}
 }

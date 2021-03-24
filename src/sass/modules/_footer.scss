@@ -23,6 +23,7 @@
 			margin-top: 2rem;
 			&.is-active {
 				font-weight: bold;
+				text-decoration: none!important;
 				&:after {
 					content: '';
 					display: block;
