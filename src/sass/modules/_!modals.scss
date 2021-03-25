@@ -1,11 +1,6 @@
-.mfp-container{
-	padding: 0 15px;
-	overflow-x: hidden;
-	overflow-y: auto;
-}
 .mfp-bg{
-	background-color: rgba(0, 0, 0, 0.302);
-	opacity: 1;
+	background: rgba(0, 19, 43, 0.51);
+	opacity: 0;
 	transition: ease .7s;
 	&.mfp-ready {
 		opacity: 1;
@@ -18,17 +13,53 @@
 	display: none;
 }
 
-.mfp-image-holder {
-	background-color: rgba(0, 0, 0, 0.702);
-}
-
 .mfp-content{
 	@extend .clear;
+}
+
+
+.mfp-container {
+	padding: 0 15px;
+}
+
+.mfp-gallery{
+	.mfp-container{
+		padding: 0 15px;	
+	}
+
+	.mfp-figure{
+		position: relative;
+	}
+
+	.modals__close{
+		z-index: 9999;
+	}
+
+	figure{
+		position: relative;
+	}
+}
+
+.mfp-figure {
+	max-height: 90vh;
+	img.mfp-img {
+		max-height: 90vh !important;
+		padding: 10px 0;
+	}
 }
 
 .modals{
 	margin: auto;
 	position: relative;
+	&__close {
+		position: absolute;
+		right: 0;
+		top: -35rem;
+		width: 20rem;
+		height: 20rem;
+		fill: #fff;
+		cursor: pointer;
+	}
 }
 
 .css-modal-animate{
@@ -43,15 +74,6 @@
 	.modals, .mfp-figure{
 		transition: all .5s ease;
 		opacity: 0;
-
-		&_right{
-
-			transform: translate(25rem, 0);
-		}
-
-		&_center{
-			transform: translate(0rem, 25rem);
-		}
 	}
 
 	// animate in
@@ -59,8 +81,11 @@
 		.modals__arrow{
 			opacity: 1;
 		}
-		.modals, .mfp-figure{
-			transform: translate(0, 0);
+		.modals {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		.mfp-figure{
 			opacity: 1;
 		}
 	}
@@ -72,14 +97,7 @@
 		}
 		.modals, .mfp-figure{
 			opacity: 0;
-
-			&_right{
-				transform: translate(25rem, 0);
-			}
-
-			&_center{
-				transform: translate(0rem, 25rem);
-			}
+			transform: translateY(-25rem);
 		}
 	}
 

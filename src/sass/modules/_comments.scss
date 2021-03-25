@@ -1,0 +1,286 @@
+.comments {
+	padding-bottom: 20rem;
+	
+	&__title {
+		text-align: center;
+	}
+	
+	&__box {
+		padding: 15rem 0;
+		display: flex;
+		position: relative;
+		border-bottom: 1px solid $default;
+		&_answer {
+			margin-left: 220rem;
+		}
+	}
+	&__left {
+		width: 100%;
+		padding-right: 30rem;
+		display: flex;
+		margin-top: -5rem;
+		margin-bottom: -5rem;
+	}
+	&__right {
+		width: 240rem;
+		min-width: 240rem;
+		padding-left: 10rem;
+		display: flex;
+		align-items: center;
+		border-left: 1px solid $default;
+		font-size: 14rem;
+		line-height: 16/14*1;
+		font-weight: bold;
+		&-info {
+			display: flex;
+			align-items: center;
+		}
+	}
+	
+	&__date {
+		margin-right: 15rem;
+	}
+	
+	&__ava {
+		width: 75rem;
+		min-width: 75rem;
+		height: 75rem;
+		margin-right: 10rem;
+		border-radius: 100%;
+		overflow: hidden;
+	}
+	
+	&__info {
+		display: flex;
+		padding-top: 29rem;
+		font-size: 14rem;
+		line-height: 16/14*1;
+	}
+	
+	&__name {
+		font-weight: bold;
+		padding-right: 5rem;
+		width: 135rem;
+		min-width: 135rem;
+	}
+	
+	&__text {
+		font-style: italic;
+		line-height: 1.7;
+		margin-top: -3rem;
+	}
+	
+	&__speech {
+		width: 24rem;
+		min-width: 24rem;
+		height: 24rem;
+		fill: $default;
+		margin-left: 20rem;
+	}
+	
+	&__answer-icon {
+		position: absolute;
+		right: 100%;
+		margin-right: 10rem;
+		width: 30rem;
+		height: 30rem;
+		top: 50%;
+		margin-top: -15rem;
+	}
+	
+	&-form {
+		margin-top: 9rem;
+		position: relative;
+		&__input {
+			display: block;
+			width: 100%;
+			border: 1px solid $default;
+			height: 58rem;
+			color: $default;
+			border-radius: 20rem;
+			background: none;
+			padding-left: 152rem;
+			font-size: 14rem;
+			line-height: 16/14*1;
+			font-style: italic;
+			overflow: hidden;
+			resize: none;
+			padding-top: 20rem;
+			padding-right: 60rem;
+			&::placeholder {
+				color: $gray;
+			}
+		}
+		&__title {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 58rem;
+			background: $default;
+			color: $base;
+			width: 142rem;
+			border-radius: 20rem;
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: 14rem;
+			line-height: 16/14*1;
+			font-weight: bold;
+		}
+		&__btn {
+			width: 40rem;
+			height: 40rem;
+			background: none;
+			border: 0;
+			cursor: pointer;
+			position: absolute;
+			top: 9rem;
+			right: 9rem;
+			fill: $default;
+		}
+	}
+	
+	@include max-screen($small_tablet) {
+		&__box {
+			padding: 12rem 0;
+			&_answer {
+				margin-left: 138rem;
+			}
+		}
+		&__left {
+			margin-bottom: -2rem;
+			margin-top: -2rem;
+		}
+		
+		&__ava {
+			width: 48rem;
+			height: 48rem;
+			min-width: 48rem;
+		}
+		&__info {
+			padding-top: 15rem;
+		}
+		&__text {
+			line-height: 16/14*1;
+			margin-top: 0;
+		}
+		&__right {
+			width: 112rem;
+			min-width: 112rem;
+			justify-content: space-between;
+			&-info {
+				display: block;
+			}
+		}
+		&__date {
+			margin-right: 0;
+		}
+		&__speech {
+			width: 15rem;
+			height: 15rem;
+			min-width: 15rem;
+		}
+		&__answer-icon {
+			width: 19rem;
+			height: 19rem;
+			margin-top: -9rem;
+			margin-right: 6rem;
+		}
+		
+		&-form {
+			&__input {
+				height: 37rem;
+				padding-top: 9rem;
+			}
+			&__title {
+				height: 37rem;
+			}
+			&__btn {
+				width: 25rem;
+				height: 25rem;
+				right: 6rem;
+				top: 6rem;
+			}
+		}
+	}
+	@include max-screen($small_mobile) {
+		padding: 10rem 0 5rem 0;
+		
+		&__ava {
+			width: 40rem;
+			height: 40rem;
+			min-width: 40rem;
+			border-radius: 100%;
+			margin-right: 7rem;
+		}
+		&__left {
+			display: block;
+		}
+		&__answer-icon {
+			display: none;
+		}
+		&__box {
+			display: block;
+			position: relative;
+			&_answer {
+				margin-left: 0;
+			}
+		}
+		&__right {
+			width: 50%;
+			position: absolute;
+			top: 10rem;
+			height: 40rem;
+			right: 0;
+			&-info {
+				display: flex;
+			}
+		}
+		&__info {
+			display: block;
+			padding-top: 0;
+		}
+		&__name {
+			margin-left: 47rem;
+			margin-top: -36rem;
+			height: 36rem;
+			max-width: 90rem;
+			width: auto;
+			min-width: inherit;
+		}
+		&__date {
+			margin-right: 10rem;
+		}
+		&__text {
+			margin-top: 8rem;
+		}
+		
+		&-form {
+			&__title {
+				position: static;
+				width: 100%;
+				height: auto;
+				color: $default;
+				background: none;
+				margin-bottom: 5rem;
+			}
+			&__input {
+				padding-left: 13rem;
+				padding-top: 5rem;
+				padding-bottom: 5rem;
+				padding-right: 35rem;
+				height: 58rem;
+			}
+			&__field {
+				position: relative;
+			}
+			&__btn {
+				width: 25rem;
+				height: 100%;
+				border-left: 1px solid $default;
+				top: 0;
+				right: 0;
+			}
+		}
+	}
+}

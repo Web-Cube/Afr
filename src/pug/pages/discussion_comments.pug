@@ -1,0 +1,100 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Discussion_comments';
+
+block content
+	+b.head-page
+		+e.wrap.wrap
+			+e.row.flex
+				+e.column._left.is-discussion
+					+e.A.back.back__(href="/discussion.html")
+						+e.arrow
+							+icon('prev')
+						+e.text Discussion
+					+e.H1.title.h1.hide Discussion
+					+e.text.p.back-text Find the answer to any question
+				+e.column._right.is-discussion
+					+e.top.is-discussion
+						+e.search-form.search-form__.is-discussion
+							+e.field.field__
+								+e.INPUT.input(type="text", name="search" placeholder="Search (enter your search term or hashtag)")
+							+e.BUTTON.btn
+								+icon('search')
+						+e.btn-wrap.hide
+							+e.A.btn.button__(href="#") Ask a question
+	+b.discussion-single
+		+e.wrap.wrap
+			+b.discussion-profile
+				+e.question.show How can I extend my visa without entering Ukraine?
+				+e.row
+					+e.column._left
+						+e.author
+							+e.ava
+								img(src="/img/ava1.jpg")
+							+e.author-info
+								+e.name
+									| Thomas Rickman 
+									em 27 years Bolivia
+								+e.topic
+									strong Documents
+								+e.status
+									strong Open for discussion
+					+e.column._right
+						+e.question.hide How can I extend my visa without entering Ukraine?
+						+e.desc.h3
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices nisi mi, at elementum dolor rutrum eget. Morbi aliquam quam sed consequat euismod. Praesent quis ipsum ut erat aliquam dictum vitae sit amet lacus. Quisque id fermentum nulla. Cras rhoncus sapien in nulla euismod eleifend. Etiam ultricies ex sed sapien sodales, quis interdum orci maximus. 
+						+e.slider-wrap
+							+e.slider.js-gallery.js-slider(
+								data-settings=`{
+									"smartSpeed": 500,
+									"items": 3,
+									"center": false,
+									"nav": true,
+									"dots": false,
+									"navContainer": ".js-slider-nav",
+									"margin": 11,
+									"responsive": {
+										"0": {
+											"items": 1
+										},
+										"441": {
+											"items": 3
+										}
+									}
+								}`, data-progress-bar=".js-progress-bar", data-counter=".js-counter", data-counter-text="of")
+								+e.slide
+									+e.A.preview(href="/app/img/discussion__img1.jpg")
+										img.object-fit(src="/img/discussion__img1.jpg")
+								+e.slide
+									+e.A.preview(href="/app/img/discussion__img2.jpg")
+										img.object-fit(src="/img/discussion__img2.jpg")
+								+e.slide
+									+e.A.preview(href="/app/img/discussion__img3.jpg")
+										img.object-fit(src="/img/discussion__img3.jpg")
+								+e.slide
+									+e.A.preview(href="/app/img/discussion__img1.jpg")
+										img.object-fit(src="/img/discussion__img1.jpg")
+								+e.slide
+									+e.A.preview(href="/app/img/discussion__img2.jpg")
+										img.object-fit(src="/img/discussion__img2.jpg")
+								+e.slide
+									+e.A.preview(href="/app/img/discussion__img3.jpg")
+										img.object-fit(src="/img/discussion__img3.jpg")
+							+e.nav-tablet.js-slider-nav.owl-nav
+						+e.bottom
+							+e.name
+								| Thomas Rickman 
+								em 27 years Bolivia
+							+e.topic
+								strong Documents
+							+e.views 126
+							+e.comments 21
+							+e.status
+								strong Open for discussion
+							+e.controls.owl-controls
+								+e.nav.js-slider-nav.owl-nav
+								+e.progress.js-progress-bar.owl-progress
+									.owl-progress-bar
+								+e.counter.js-counter.owl-counter
+	include ../layouts/comments

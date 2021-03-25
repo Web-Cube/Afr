@@ -87,6 +87,10 @@
 		display: none;
 	}
 	
+	&__back {
+		display: none;
+	}
+	
 	@include max-screen($small_tablet) {
 		.hidden-tablet {
 			display: none;
@@ -194,6 +198,18 @@
 			.button, .button-filter {
 				width: 48%;
 			}
+		}
+		.hide {
+			display: none;
+		}
+		&__back {
+			display: inline-flex;
+			margin-bottom: 7rem;
+		}
+		
+		.back-text {
+			font-size: 18rem;
+			line-height: 21/18*1;
 		}
 	}
 }

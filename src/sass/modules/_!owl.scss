@@ -1,36 +1,4 @@
 .owl {
-	&-prev, &-next {
-		width: 10rem;
-		height: 20rem;
-		background: none;
-		cursor: pointer;
-		position: absolute;
-		z-index: 50;
-		fill: none;
-		stroke-width: 1.5;
-		stroke: #1B1C1E;
-		border: 0;
-		&:before {
-			content: '';
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			width: 60rem;
-			height: 60rem;
-			border: 1px solid #1B1C1E;
-			transform: translateX(-50%) translateY(-50%) scale(0.5);
-			border-radius: 100%;
-			opacity: 0;
-			transition: ease .15s;
-		}
-		&:hover {
-			&:before {
-				transform: translateX(-50%) translateY(-50%) scale(1);
-				opacity: 1;
-			}
-		}
-	}
-	
 	&-progress {
 		height: 1px;
 		background: #F1F1F1;
@@ -38,6 +6,50 @@
 			height: 1px;
 			background: #000;
 			transition: ease .2s;
+		}
+	}
+	
+	&-prev, &-next {
+		cursor: pointer;
+		width: 24rem;
+		height: 24rem;
+		background: none;
+		fill: $gray;
+		border: 0;
+		position: absolute;
+		top: 0;
+		z-index: 50;
+	}
+	&-prev {
+		left: 0;
+	}
+	&-next {
+		right: 0;
+	}
+	
+	&-counter {
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		left: 0;
+		top: -10rem;
+		font-size: 24rem;
+		line-height: 28/24*1;
+		font-weight: 500;
+		color: $gray;
+	}
+	
+	&-progress {
+		height: 1px;
+		position: relative;
+		background: $gray;
+		width: 100%;
+		&-bar {
+			position: absolute;
+			left: 0;
+			top: -1px;
+			height: 3px;
+			background: $default;
 		}
 	}
 	
@@ -49,14 +61,47 @@
 		float: none;
 	}
 	
-	@include max-screen($large_mobile) {
+	&-carousel {
+		.owl-item {
+			float: none;
+		}
+	}
+	
+	&-controls {
+		width: 409rem;
+		height: 24rem;
+		padding: 0 30rem;
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+	
+	@include max-screen($small_tablet) {
 		&-prev, &-next {
-			width: 12px;
-			height: 24px;
-			stroke-width: 2;
-			&:before {
+			width: 50rem;
+			height: 50rem;
+			background-size: 100% 100%;
+			background-position: 0 0;
+			background-repeat: no-repeat;
+			top: 50%;
+			margin-top: -25rem;
+			svg {
 				display: none;
 			}
+		}
+		&-prev {
+			background-image: url(/img/prevWhite.svg);
+		}
+		&-next {
+			background-image: url(/img/nextWhite.svg);
+		}
+		&-progress, &-counter {
+			display: none;
+		}
+		&-controls {
+			width: 100%;
+			height: 0;
+			position: static;
 		}
 	}
 }

@@ -115,3 +115,17 @@
 		top: 5rem;
 	}
 }
+
+.back {
+	display: inline-flex;
+	align-items: center;
+	font-size: 24rem;
+	line-height: 28/24*1;
+	font-weight: bold;
+	&__arrow {
+		width: 24rem;
+		height: 24rem;
+		margin-right: 15rem;
+		fill: $default;
+	}
+}

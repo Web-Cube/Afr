@@ -69,6 +69,29 @@ var modals = {
 		$(document).on('click', '.js-close-modal', modals.close);
 
 		$(document).on('click', '.js-modal', modals.open);
+		
+		$('.js-gallery').each(function() {
+			$(this).magnificPopup({
+				delegate: 'a',
+				type: 'image',
+				tClose: 'Закрыть',
+				removalDelay: 600,
+				fixedContentPos: false,
+				closeOnContentClick: false,
+				fixedBgPos: true,
+				closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-close close" viewBox="0 0 14 14"><use xlink:href="/app/icons/sprite.svg#close"></use></svg></div>',
+				mainClass: 'css-modal-animate',
+				image: {
+					verticalFit: true
+				},
+				gallery: {	
+					enabled: true,
+					navigateByImgClick: true
+				}
+
+
+			});			
+		});
 
 	}
 

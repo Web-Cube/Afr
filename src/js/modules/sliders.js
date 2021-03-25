@@ -10,6 +10,19 @@ import { defaults } from "./defaults";
  */
 
 var sliders = {
+	
+	tabs: (e) => {
+		
+		let index = $(e.currentTarget).index();
+  		$('.js-slider-for').trigger( 'to.owl.carousel', [index, 500] );
+		
+		if ( $(e.currentTarget).hasClass('js-slider-to') ) {
+			$('.js-slider-to.is-active').removeClass('is-active');
+			$(e.currentTarget).addClass('is-active');
+		}
+		
+	},
+	
 	selector: ".js-slider",
 
 	settings: {
@@ -21,8 +34,8 @@ var sliders = {
 		smartSpeed: 600,
 		margin: 20,
 		navText: [
-			'<svg class="icon icon-arrowLeft" viewBox="0 0 12 19"><use xlink:href="/app/icons/sprite.svg#arrowLeft"></use></svg>',
-			'<svg class="icon icon-arrowRight" viewBox="0 0 12 19"><use xlink:href="/app/icons/sprite.svg#arrowRight"></use></svg>',
+			'<svg class="icon icon-prev" viewBox="0 0 24 24"><use xlink:href="/app/icons/sprite.svg#prev"></use></svg>',
+			'<svg class="icon icon-next" viewBox="0 0 24 24"><use xlink:href="/app/icons/sprite.svg#next"></use></svg>',
 		],
 	},
 
@@ -68,8 +81,9 @@ var sliders = {
 
 				if ($slider.attr("data-counter")) {
 					let counter = $slider.data("counter");
+					let counterText = $slider.data("counter-text");
 					$(counter).html(
-						`<div class="owl-counter"><span class="owl-counter-current">${current}</span>/${length}</div>`
+						`<div class="owl-counter"><span class="owl-counter-current">${current}</span> ${counterText} ${length} </div>`
 					);
 				}
 			})
@@ -135,23 +149,6 @@ var sliders = {
 	run: (selector) => {
 		sliders.build(selector);
 	},
-	
-	resize: () => {
-		
-		if ( $(sliders.selector).hasClass("owl-resize") && ( $(window).innerWidth() > 1100 ) ) {
-			
-			let bigSelector = $('.blog__item_big');
-			let smallSelector = $('.blog__item_small');
-			let containerWidth = $(sliders.selector).innerWidth();
-			
-			bigSelector.css('width', (containerWidth/2) - 15);
-			
-			smallSelector.css('width', (containerWidth/4) - 23);
-			
-		} else {
-			$('.blog__item').css('width','');
-		}
-	},
 
 	init: () => {
 		if (!$(sliders.selector).length) return false;
@@ -162,9 +159,41 @@ var sliders = {
 			});
 		});
 		
-		sliders.resize();
+		
+		$('.js-slider-single').each(function(){
+			var main_slider = $('.js-slider-single');
+			var nav_slider = $('.js-slider-nav');
+
+			nav_slider.children().each( function( index ) {
+				$(this).attr( 'data-position', index );
+			});			
+
+			nav_slider.on('initialized.owl.carousel changed.owl.carousel', function(property) {
+				var current = property.item.index;
+				var src = $(property.target).find(".owl-item").eq(current);
+				$(property.target).find('.owl-item.is-current').removeClass('is-current');
+				src.addClass('is-current');
+				
+				main_slider.trigger( 'to.owl.carousel', [current, 500] );
+		
+			}).on('dragged.owl.carousel', function (e) {
+				var carousel = e.relatedTarget;
+				var slideIndex = (carousel.relative(carousel.current()));
+
+				main_slider.trigger('to.owl.carousel', [slideIndex])
+			});
 			
-		$(window).on('resize', sliders.resize);
+			main_slider.on('dragged.owl.carousel', function (property) {
+				var current = property.item.index;
+
+				nav_slider.trigger( 'to.owl.carousel', [current, 500] );
+			});
+
+			$(document).on('click', '.js-slider-preview', function() {
+				nav_slider.trigger('to.owl.carousel', $(this).data( 'position' ) );
+				main_slider.trigger('to.owl.carousel', $(this).data( 'position' ) );
+			});
+		});
 	},
 };
 
