@@ -65,6 +65,11 @@ var defaults = {
 		item.find('.js-select-label').text(value);
 		item.find('.js-select-item.is-active').removeClass('is-active');
 		$(e.currentTarget).addClass('is-active');
+		
+		if ( item.hasClass('is-change') ) {
+			item.removeClass('is-change');
+			item.removeClass('error');
+		}
 			
 	},
 	

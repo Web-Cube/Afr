@@ -1,0 +1,59 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Account_sign_up';
+
+block content
+	+b.head-page.hide
+		+e.wrap.wrap
+			+e.row._contact.flex
+				+e.column._left.is-discussion
+					+e.H1.title.h1 My account
+				+e.column._right.is-discussion
+					+e.top.is-discussion
+						+e.search-form.search-form__.is-discussion
+							+e.field.field__
+								+e.INPUT.input(type="text", name="search" placeholder="Search (enter your search term or hashtag)")
+							+e.BUTTON.btn
+								+icon('search')
+	+b.login
+		+e.wrap.wrap
+			+e.H2.title.h2 Welcome to Afr.ua, my friend!
+			+e.desc
+				a(href="/login.html") Log in 
+				| or 
+				a(href="/singup.html") Sign Up 
+				| to use all the functions of the site
+			+e.inner
+				+e.nav
+					+e.nav-link(href="/login.html") Log In
+					+e.nav-link.is-active(href="/singup.html") Sign Up
+				+e.FORM.form.form__(actioin="#")
+					+e.row.flex._justify
+						+e.col3
+							+e.field.field__
+								+e.INPUT.input(type="text", name="username" placeholder="Username")
+						+e.col3
+							+e.field.field__
+								+e.INPUT.input(type="text", name="firstName" placeholder="Your name")
+						+e.col3
+							+e.field.field__
+								+e.INPUT.input(type="text", name="firstName" placeholder="Your Surname")
+					+e.field.field__
+						+e.INPUT.input(type="tel", name="phone" placeholder="Your phone")
+					+e.field.field__
+						+e.INPUT.input(type="text", name="email" placeholder="Your e-mail")
+					+e.field.field__.js-password-wrap
+						+e.INPUT.input#pass.js-password-input(type="password", name="pass" placeholder="Enter password")
+						+e.LABEL.pass
+							+e.INPUT.pass-check.js-password(type="checkbox")
+							+e.pass-icon._closed
+								+icon('eyeLock')
+							+e.pass-icon._open
+								+icon('eye')
+					+e.field.field__.js-password-wrap
+						+e.INPUT.input(type="password", name="pass" placeholder="Confirm password")
+					+e.BUTTON.btn.button Sign Up
+				+e.bottom
+					| Already have an account? 
+					a(href="/singup.html") Log In

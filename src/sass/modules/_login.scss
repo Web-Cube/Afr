@@ -1,0 +1,66 @@
+.login {
+	text-align: center;
+	padding: 18rem 0 55rem 0;
+	min-height: 45vh;
+	
+	&__desc {
+		margin-top: 13rem;
+		a {
+			font-weight: 500;
+		}
+	}
+	
+	&__inner {
+		max-width: 440rem;
+		margin: 20rem auto 0 auto;
+	}
+	
+	&__nav {
+		display: flex;
+		margin-bottom: 10rem;
+		
+		&-link {
+			font-size: 24rem;
+			line-height: 28/24*1;
+			color: $gray;
+			&.is-active {
+				color: $default;
+				font-weight: bold;
+			}
+			&:not(:last-child) {
+				margin-right: 25rem;
+			}
+		}
+	}
+	
+	&__bottom {
+		margin-top: 10rem;
+		font-size: 14rem;
+		line-height: 16/14*1;
+		font-weight: 300;
+		a {
+			font-weight: bold;
+		}
+	}
+	
+	@include max-screen($small_tablet) {
+		min-height: 47vh;
+	}
+	
+	@include max-screen($small_mobile) {
+		padding: 0 0 20rem 0;
+		min-height: 42vh;
+		&__title {
+			font-size: 24rem;
+			line-height: 28/24*1;
+			margin-left: -5px;
+			margin-right: -5px;
+		}
+		&__desc {
+			margin-top: 10rem;
+			a {
+				font-weight: bold;
+			}
+		}
+	}
+}

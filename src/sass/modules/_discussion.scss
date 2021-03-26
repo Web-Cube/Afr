@@ -268,3 +268,81 @@
 		}
 	}
 }
+
+.ask-descussion {
+	padding: 10rem 0 55rem 0;
+	&__row {
+		margin: 0 -10rem;
+	}
+	&__column {
+		padding: 0 10rem;
+		width: 50%;
+	}
+	&__select {
+		width: 100%;
+	}
+	&__title {
+		margin-bottom: 20rem;
+	}
+	&__field {
+		margin-bottom: 10rem;
+	}
+	&__files {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10rem;
+		&-item {
+			width: calc( 25% - 10rem );
+			margin-left: 10rem;
+			margin-bottom: 10rem;
+		}
+		&-preview {
+			position: relative;
+			overflow: hidden;
+			padding-top: 90/140*100%;
+		}
+	}
+	&__add {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #C4C4C4;
+	}
+	&__btn-wrap {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+	&__btn {
+		width: 100%;
+		max-width: 500rem;
+	}
+	@include max-screen($small_tablet) {
+		padding-bottom: 20rem;
+		&__form {
+			max-width: 590rem;
+			margin: auto;
+		}
+		&__column {
+			width: 100%;
+		}
+		&__btn {
+			max-width: 100%;
+		}
+	}
+	@include max-screen($small_mobile) {
+		&__title {
+			margin-bottom: 10rem;
+		}
+		&__files {
+			&-item {
+				width: calc( 50% - 10rem );
+			}
+		}
+	}
+}

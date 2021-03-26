@@ -20,6 +20,7 @@ var forms = {
 			var $form = $(el);
 
 			$form.validate({
+				ignore: ":hidden",
 				errorPlacement: function (error, element) {
 					//just nothing, empty
 				},
@@ -68,10 +69,18 @@ var forms = {
 
 				if ($input.val() == "") $input.parent().removeClass("is-focus");
 			});
+		
+		$('.js-password').change(function(){
+			if ($(this).is(':checked')){
+				$(this).closest('.js-password-wrap').find('.js-password-input').attr('type', 'text');
+			} else {
+				$(this).closest('.js-password-wrap').find('.js-password-input').attr('type', 'password');
+			}
+		});
 	},
 
 	init: () => {
-		forms.mask();
+		//forms.mask();
 		forms.validate();
 		forms.events();
 	},

@@ -4,6 +4,9 @@
 		padding: 13rem 0 20rem 0;
 		min-height: 148rem;
 		border-bottom: 1px solid $default;
+		&_contact {
+			min-height: inherit;
+		}
 	}
 	&__column {
 		&_left {
@@ -117,6 +120,11 @@
 			margin-right: -15px;
 			padding-left: 15px;
 			padding-right: 15px;
+			&_contact {
+				.head-page__column_left, .head-page__column_right {
+					width: 50%;
+				}
+			}
 		}
 		&__nav {
 			justify-content: center;
@@ -149,6 +157,9 @@
 	}
 	
 	@include max-screen($small_mobile) {
+		&.hide {
+			display: none;
+		}
 		&__row {
 			padding-top: 0;
 			padding-bottom: 0;

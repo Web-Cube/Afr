@@ -1,0 +1,70 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Ask_discussion';
+
+block content
+	+b.head-page
+		+e.wrap.wrap
+			+e.row.flex
+				+e.column._left.is-discussion
+					+e.A.back.back__(href="/discussion.html")
+						+e.arrow
+							+icon('prev')
+						+e.text Discussion
+					+e.H1.title.h1.hide Discussion
+					+e.text.p.back-text Find the answer to any question
+				+e.column._right.is-discussion
+					+e.top.is-discussion
+						+e.search-form.search-form__.is-discussion
+							+e.field.field__
+								+e.INPUT.input(type="text", name="search" placeholder="Search (enter your search term or hashtag)")
+							+e.BUTTON.btn
+								+icon('search')
+	+b.ask-descussion
+		+e.wrap.wrap
+			+e.FORM.form(actioin="#")
+				+e.H3.title.h3 Ask a question
+				+e.row.flex
+					+e.column._left
+						+e.field
+							+e.select.select__.js-select.is-change
+								+e.INPUT.input.js-select-input(type="hidden" value="Choose a topic")
+								+e.head.js-select-head
+									+e.label.js-select-label Choose a topic
+									+e.arrow
+										+icon('downArrow')
+								+e.body
+									+e.list
+										+e.item.js-select-item(data-value="Hot News") Hot News
+										+e.item.js-select-item(data-value="Life") Life
+										+e.item.js-select-item(data-value="Showbiz") Showbiz
+										+e.item.js-select-item(data-value="Music") Music
+										+e.item.js-select-item(data-value="Sport") Sport
+										+e.item.js-select-item(data-value="Health") Health
+										+e.item.js-select-item(data-value="Politics") Politics
+										+e.item.js-select-item(data-value="Economics") Economics
+										+e.item.js-select-item(data-value="Others") Others
+						+e.field.field__
+							+e.INPUT.input(type="text", name="question" placeholder="Enter your question")
+						+e.field.field__
+							+e.TEXTAREA.textarea(placeholder="Describe your question in more detail" name="detail")
+					+e.column._right
+						+e.files
+							+e.files-item
+								+e.files-preview
+									img.object-fit(src="/img/file__img1.jpg")
+							+e.files-item
+								+e.files-preview
+									img.object-fit(src="/img/file__img2.jpg")
+							+e.files-item
+								+e.files-preview
+									img.object-fit(src="/img/file__img3.jpg")
+							+e.files-item
+								+e.files-preview
+									+e.add.add-file__
+										+e.INPUT.input(type="file" name="foto")
+										+e.text
+											strong +Add image
+				+e.btn-wrap
+					+e.BUTTON.btn.button Add to discussion

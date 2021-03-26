@@ -13,7 +13,73 @@
 		font-family: 'Ubuntu';
 		background: none;
 		&::placeholder {
-			color: $gray;
+			color: #989898;
+		}
+	}
+	
+	&__textarea {
+		display: block;
+		width: 100%;
+		border-radius: 20rem;
+		font-size: 14rem;
+		line-height: 16/14*1;
+		border: 1px solid $default;
+		color: $default;
+		font-family: 'Ubuntu';
+		background: none;
+		padding: 10rem 12rem;
+		height: 210rem;
+		overflow: hidden;
+		resize: none;
+		&::placeholder {
+			color: #989898;
+		}
+	}
+	
+	&__add {
+		position: absolute;
+		bottom: 8rem;
+		right: 14rem;
+	}
+	
+	&__pass {
+		position: absolute;
+		width: 24rem;
+		height: 100%;
+		right: 8rem;
+		top: 0;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		&-icon {
+			&_closed {
+				fill: $gray;
+			}
+			&_open {
+				fill: $default;
+				display: none;
+			}
+		}
+		&-check {
+			display: none;
+			&:checked + .field__pass-icon_closed {
+				display: none;
+				& + .field__pass-icon_open {
+					display: block;
+				}
+			}
+		}
+	}
+	
+	&.error {
+		.field {
+			&__input, &__textarea {
+				color: $red;
+				border-color: $red;
+				&::placeholder {
+					color: $red;
+				}
+			}
 		}
 	}
 }
