@@ -13,12 +13,15 @@
 		cursor: pointer;
 		width: 24rem;
 		height: 24rem;
-		background: none;
+		background: none!important;
 		fill: $gray;
 		border: 0;
 		position: absolute;
 		top: 0;
 		z-index: 50;
+		&.disabled {
+			display: none;
+		}
 	}
 	&-prev {
 		left: 0;
@@ -80,20 +83,31 @@
 		&-prev, &-next {
 			width: 50rem;
 			height: 50rem;
-			background-size: 100% 100%;
-			background-position: 0 0;
-			background-repeat: no-repeat;
 			top: 50%;
 			margin-top: -25rem;
 			svg {
 				display: none;
 			}
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
 		}
 		&-prev {
-			background-image: url(/img/prevWhite.svg);
+			&:before {
+				background: url(/img/prevWhite.svg) 0 0 no-repeat;
+				background-size: 100% 100%;
+			}
 		}
 		&-next {
-			background-image: url(/img/nextWhite.svg);
+			&:before {
+				background: url(/img/nextWhite.svg) 0 0 no-repeat;
+				background-size: 100% 100%;
+			}
 		}
 		&-progress, &-counter {
 			display: none;

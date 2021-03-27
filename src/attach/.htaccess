@@ -36,6 +36,6 @@ ExpiresByType image/svg+xml "access plus 1 month"
 ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
  </ifmodule>
 
- <FilesMatch "\.(js|css|txt)$">
-Header set Cache-Control "max-age=604800"
-</FilesMatch>
+ #<FilesMatch "\.(js|css|txt)$">
+#Header set Cache-Control "max-age=604800"
+#</FilesMatch>

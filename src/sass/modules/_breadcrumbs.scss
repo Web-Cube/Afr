@@ -1,0 +1,21 @@
+.breadcrumbs {
+	padding: 10rem 0;
+	color: $gray;
+	font-weight: 500;
+	
+	&__list {
+		list-style: none;
+		display: flex;
+		margin-top: 10rem;
+	}
+	&__item {
+		display: flex;
+		&:not(:last-child) {
+			margin-right: 5rem;
+			&:after {
+				content: '>';
+				margin-left: 5rem;
+			}
+		}
+	}
+}

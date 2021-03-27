@@ -1,0 +1,204 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Post';
+
+block content
+	+b.breadcrumbs
+		+e.wrap.wrap
+			+e.row
+				+e.A.back(href="#")
+					| < Back
+				+e.UL.list
+					+e.LI.item
+						+e.A.link(href="#") News
+					+e.LI.item
+						+e.A.link(href="#") Popular
+					+e.LI.item Ukraine resumes flights with 5 countries
+	+b.post
+		+e.wrap.wrap
+			+e.top
+				+e.H1.title Ukraine resumes flights with 5 countries 
+				+e.share.share__
+					+e.item
+						+e.icon
+							+icon('eye')
+						+e.count 1385
+					+e.A.item(href="#")
+						+e.icon
+							+icon('like')
+						+e.count 1005
+					+e.A.item(href="#")
+						+e.icon
+							+icon('share')
+						+e.count 380
+					+e.A.item(href="#")
+						+e.icon
+							+icon('comment')
+						+e.count 96
+					+e.A.item(href="#")
+						+e.icon
+							+icon('heart')
+			+e.gallery
+				+e.slider-big.js-slider-single.js-slider(
+					data-settings=`{
+						"smartSpeed": 500,
+						"margin": 10,
+						"loop": true,
+						"nav": false,
+						"responsive": {
+							"0": {
+								"nav": true
+							},
+							"769": {
+								"nav": false
+							}
+						}
+					}`)
+					+e.slide-big
+						+e.preview-big
+							img.object-fit(src="/img/post__slide1.jpg")
+					+e.slide-big
+						+e.preview-big
+							img.object-fit(src="/img/post__slide2.jpg")
+					+e.slide-big
+						+e.preview-big
+							img.object-fit(src="/img/post__slide3.jpg")
+					+e.slide-big
+						+e.preview-big
+							img.object-fit(src="/img/post__slide4.jpg")
+					+e.slide-big
+						+e.preview-big
+							img.object-fit(src="/img/post__slide1.jpg")
+					+e.slide-big
+						+e.preview-big
+							img.object-fit(src="/img/post__slide2.jpg")
+					+e.slide-big
+						+e.preview-big
+							img.object-fit(src="/img/post__slide3.jpg")
+					+e.slide-big
+						+e.preview-big
+							img.object-fit(src="/img/post__slide4.jpg")
+				+e.slider-min.js-slider-nav.js-slider(
+					data-settings=`{
+						"smartSpeed": 500,
+						"items": 4,
+						"loop": true,
+						"nav": true,
+						"margin": 10,
+						"navContainer": ".js-slider-nav"
+					}`, data-progress-bar=".js-progress-bar", data-counter=".js-counter", data-counter-text="of")
+					+e.slide-min.js-slider-preview
+						+e.preview-min
+							img.object-fit(src="/img/post__slide1.jpg")
+					+e.slide-min.js-slider-preview
+						+e.preview-min
+							img.object-fit(src="/img/post__slide2.jpg")
+					+e.slide-min.js-slider-preview
+						+e.preview-min
+							img.object-fit(src="/img/post__slide3.jpg")
+					+e.slide-min.js-slider-preview
+						+e.preview-min
+							img.object-fit(src="/img/post__slide4.jpg")
+					+e.slide-min.js-slider-preview
+						+e.preview-min
+							img.object-fit(src="/img/post__slide1.jpg")
+					+e.slide-min.js-slider-preview
+						+e.preview-min
+							img.object-fit(src="/img/post__slide2.jpg")
+					+e.slide-min.js-slider-preview
+						+e.preview-min
+							img.object-fit(src="/img/post__slide3.jpg")
+					+e.slide-min.js-slider-preview
+						+e.preview-min
+							img.object-fit(src="/img/post__slide4.jpg")
+				+e.controls.owl-controls
+					+e.nav.js-slider-nav.owl-nav
+					+e.progress.js-progress-bar.owl-progress
+						.owl-progress-bar
+					+e.counter.js-counter.owl-counter
+			+e.row
+				+e.column._left
+					+e.content.content
+						h2 Заголовок h2
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in massa non libero tincidunt scelerisque. Cras pharetra, erat a tincidunt interdum, justo mauris dignissim nisl, a volutpat enim risus eget felis. Curabitur elit ligula, venenatis iaculis interdum at, interdum nec tellus. Nullam non accumsan nulla, eget feugiat augue. Fusce pellentesque ligula in diam vehicula sagittis. Nullam vel rutrum justo. 
+							a(href="#") Donec orci tellus
+							| , suscipit ut sollicitudin eget, facilisis vel dolor. 
+						h3 Заголовок h3
+						ul
+							li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							li Pellentesque in massa non libero tincidunt scelerisque.
+							li Cras pharetra, erat a tincidunt interdum, justo mauris dignissim nisl, a volutpat enim risus eget felis.
+						iframe(width='1280' height='720' src='https://www.youtube.com/embed/uj9-1qUxJbw' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+						h4 Заголовок h4
+						ol
+							li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							li Pellentesque in massa non libero tincidunt scelerisque.
+							li Cras pharetra, erat a tincidunt interdum, justo mauris dignissim nisl, a volutpat enim risus eget felis.
+					+e.action
+						+e.action-date
+							| 28/01/2021 
+							br
+							| 12:41
+						+e.tags
+							+e.tags-title Tags:
+							+e.tags-list
+								a(href="#") #fly
+								| 
+								a(href="#") #hot
+								| 
+								a(href="#") #plane
+								| 
+								a(href="#") #Ukraine
+								| 
+								a(href="#") #economy
+								| 
+								a(href="#") #article
+								| 
+								a(href="#") #country
+						+e.action-share.share__
+							+e.item
+								+e.icon
+									+icon('eye')
+								+e.count 1385
+							+e.A.item(href="#")
+								+e.icon
+									+icon('like')
+								+e.count 1005
+							+e.A.item(href="#")
+								+e.icon
+									+icon('share')
+								+e.count 380
+							+e.A.item(href="#")
+								+e.icon
+									+icon('comment')
+								+e.count 96
+							+e.A.item(href="#")
+								+e.icon
+									+icon('heart')
+					+e.bottom
+						+e.A.single(href="#")
+							+e.single-preview
+								img.object-fit(src="/img/prev_post.jpg")
+							+e.single-text Previous post
+							+e.single-name 2020 Car of the Year Winner Announced
+						+e.bottom-share
+							+e.A.bottom-item(href="#")
+								+e.bottom-icon
+									+icon('like')
+								+e.bottom-text Like
+							+e.A.bottom-item(href="#")
+								+e.bottom-icon
+									+icon('share')
+								+e.bottom-text Share
+							+e.A.bottom-item(href="#")
+								+e.bottom-icon
+									+icon('heart')
+								+e.bottom-text Like
+						+e.A.single(href="#")
+							+e.single-preview
+								img.object-fit(src="/img/next_post.jpg")
+							+e.single-text Next post
+							+e.single-name Situation with COVID-19 in Ukraine and in the World state on 28/01/20
+				+e.column._right
