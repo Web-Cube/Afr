@@ -18,4 +18,27 @@
 			}
 		}
 	}
+	
+	&__nav {
+		display: none;
+	}
+	
+	@include max-screen($small_mobile) {
+		font-weight: bold;
+		padding-top: 0;
+		padding-bottom: 7rem;
+		&__list {
+			display: none;
+		}
+		&__row {
+			display: flex;
+			justify-content: space-between;
+		}
+		&__nav {
+			display: flex;
+		}
+		&__next {
+			margin-left: 12rem;
+		}
+	}
 }

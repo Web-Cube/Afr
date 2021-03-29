@@ -92,6 +92,19 @@
 		height: 460rem;
 		margin-top: 20rem;
 	}
+	
+	@include max-screen($small_mobile) {
+		iframe, video {
+			width: calc( 100% + 30px );
+			margin-left: -15px;
+			height: 223rem!important;
+		}
+		h2, h3, h4 {
+			&:not(:first-child) {
+				margin-top: 15rem;
+			}
+		}
+	}
 }
 
 @include max-screen($small_tablet) {

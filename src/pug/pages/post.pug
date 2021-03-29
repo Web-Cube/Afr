@@ -15,6 +15,9 @@ block content
 					+e.LI.item
 						+e.A.link(href="#") Popular
 					+e.LI.item Ukraine resumes flights with 5 countries
+				+e.nav
+					+e.A.prev(href="#") < Previous post
+					+e.A.next(href="#") Next post >
 	+b.post
 		+e.wrap.wrap
 			+e.top
@@ -54,7 +57,7 @@ block content
 								"nav": false
 							}
 						}
-					}`)
+					}`, data-counter=".js-counter")
 					+e.slide-big
 						+e.preview-big
 							img.object-fit(src="/img/post__slide1.jpg")
@@ -136,6 +139,11 @@ block content
 							li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 							li Pellentesque in massa non libero tincidunt scelerisque.
 							li Cras pharetra, erat a tincidunt interdum, justo mauris dignissim nisl, a volutpat enim risus eget felis.
+						h2 Заголовок h2
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in massa non libero tincidunt scelerisque. Cras pharetra, erat a tincidunt interdum, justo mauris dignissim nisl, a volutpat enim risus eget felis. Curabitur elit ligula, venenatis iaculis interdum at, interdum nec tellus. Nullam non accumsan nulla, eget feugiat augue. Fusce pellentesque ligula in diam vehicula sagittis. Nullam vel rutrum justo. 
+							a(href="#") Donec orci tellus
+							| , suscipit ut sollicitudin eget, facilisis vel dolor. 
 					+e.action
 						+e.action-date
 							| 28/01/2021 
@@ -202,3 +210,101 @@ block content
 							+e.single-text Next post
 							+e.single-name Situation with COVID-19 in Ukraine and in the World state on 28/01/20
 				+e.column._right
+					+e.recommend
+						+e.recommend-title.h4 Recommended
+						+e.recommend-list
+							+e.A.recommend-item.post-preview__(href="#")
+								+e.img
+									img.object-fit(src="/img/post_thumb1.jpg")
+								+e.title A sharp jump in the exchange rate. Expert forecasts
+								+e.bottom
+									+e.date
+										span 28/01/2021 
+										span 12:41
+									+e.share.share__
+										+e.item
+											+e.icon
+												+icon('eye')
+											+e.count 1385
+										+e.item
+											+e.icon
+												+icon('like')
+											+e.count 1005
+										+e.item
+											+e.icon
+												+icon('share')
+											+e.count 380
+										+e.item
+											+e.icon
+												+icon('comment')
+											+e.count 96
+										+e.item
+											+e.icon
+												+icon('heart')
+							+e.A.recommend-item.post-preview__(href="#")
+								+e.img
+									img.object-fit(src="/img/post_thumb2.jpg")
+								+e.title Situation with COVID-19 in Ukraine and in the World state on 28/01/20
+								+e.bottom
+									+e.date
+										span 28/01/2021 
+										span 12:41
+									+e.share.share__
+										+e.item
+											+e.icon
+												+icon('eye')
+											+e.count 1385
+										+e.item
+											+e.icon
+												+icon('like')
+											+e.count 1005
+										+e.item
+											+e.icon
+												+icon('share')
+											+e.count 380
+										+e.item
+											+e.icon
+												+icon('comment')
+											+e.count 96
+										+e.item
+											+e.icon
+												+icon('heart')
+							+e.A.recommend-item.post-preview__(href="#")
+								+e.img
+									img.object-fit(src="/img/post_thumb3.jpg")
+								+e.title 2020 Car of the Year Winner Announced
+								+e.bottom
+									+e.date
+										span 28/01/2021 
+										span 12:41
+									+e.share.share__
+										+e.item
+											+e.icon
+												+icon('eye')
+											+e.count 1385
+										+e.item
+											+e.icon
+												+icon('like')
+											+e.count 1005
+										+e.item
+											+e.icon
+												+icon('share')
+											+e.count 380
+										+e.item
+											+e.icon
+												+icon('comment')
+											+e.count 96
+										+e.item
+											+e.icon
+												+icon('heart')
+						+e.A.banner(href="#")
+							+e.banner-img
+								img.object-fit(src="/img/banner_small.jpg")
+							+e.banner-text
+								| Big Texas 
+								br
+								| Burger
+								br
+								+e.SPAN.banner-small Only 1 week
+							+e.banner-price 142UAH
+	include ../layouts/comments
