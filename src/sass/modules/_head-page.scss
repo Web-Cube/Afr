@@ -104,6 +104,16 @@
 					width: 100%;
 				}
 			}
+			&_left {
+				&.is-personal {
+					width: 100%!important;	
+				}
+			}
+			&_right {
+				&.is-personal {
+					display: none;
+				}
+			}
 		}
 		&__bottom {
 			padding-bottom: 0;

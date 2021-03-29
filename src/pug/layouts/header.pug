@@ -42,7 +42,7 @@
 						+e.INPUT.input(type="text", name="search" placeholder="Search (enter your search term or hashtag)")
 					+e.BUTTON.btn
 						+icon('search')
-				+e.burger
+				+e.burger.js-mobile-show
 					+icon('menu')
 	+e.search-mobile.visible-mobile.js-search.search-mobile__
 		+e.close.js-search-close
@@ -50,3 +50,123 @@
 		+e.INPUT.input(type="text" name="search" placeholder="Search (enter your search term or hashtag)")
 		+e.BUTTON.btn
 			+icon('search')
++b.mobile.js-mobile
+	+e.bg.js-mobile-close
+	+e.box
+		+e.top
+			+e.styles
+				+e.A.style.is-active(href="#")
+					+icon('sun')
+				+e.A.style(href="#")
+					+icon('moon')
+			+e.lang.js-select.hidden-tablet
+				+e.INPUT.input(type="hidden")
+				+e.lang-head.js-select-head
+					+e.lang-arrow
+						+icon('downArrow')
+					+e.lang-label En
+				+e.lang-body
+					+e.lang-list
+						+e.A.lang-item(href="#") Fr
+						+e.A.lang-item(href="#") Ua
+						+e.A.lang-item(href="#") Ru
+			+e.close.js-mobile-close
+				+icon('close')
+		+e.inner
+			+e.menu
+				+e.menu-title.h3 Menu
+				+e.nav
+					+e.nav-item
+						+e.A.nav-link.is-active(href="#")
+							+e.nav-text News
+							+e.nav-arrow
+								+icon('arrow')
+					+e.nav-item
+						+e.A.nav-link(href="#")
+							+e.nav-text Interview
+							+e.nav-arrow
+								+icon('arrow')
+					+e.nav-item
+						+e.A.nav-link(href="#")
+							+e.nav-text Discussion
+							+e.nav-arrow
+								+icon('arrow')
+					+e.nav-item
+						+e.A.nav-link(href="#")
+							+e.nav-text Contact Us
+							+e.nav-arrow
+								+icon('arrow')
+			+e.account
+				+e.account-title.h3 Account
+				+e.account-ava
+					img.object-fit(src="/img/ava1.jpg")
+				+e.account-name.h3 Martin Scott
+				+e.menu
+					+e.nav
+						+e.nav-item
+							+e.A.nav-link(href="#")
+								+e.nav-left
+									+e.nav-text Favorive
+								+e.nav-arrow
+									+icon('arrow')
+						+e.nav-item
+							+e.A.nav-link(href="#")
+								+e.nav-left
+									+e.nav-text Notifications+1
+								+e.nav-arrow
+									+icon('arrow')
+						+e.nav-item
+							+e.A.nav-link(href="#")
+								+e.nav-left
+									+e.nav-text Message+1
+									+e.nav-icon
+										+icon('star')
+								+e.nav-arrow
+									+icon('arrow')
+						+e.nav-item
+							+e.A.nav-link(href="#")
+								+e.nav-left
+									+e.nav-text Friends+2
+									+e.nav-icon
+										+icon('star')
+								+e.nav-arrow
+									+icon('arrow')
+			+e.settings
+				+e.settings-title.h3 Settings
+				+e.nav
+					+e.nav-item
+						+e.A.nav-link(href="#")
+							+e.nav-text Personal information
+							+e.nav-arrow
+								+icon('arrow')
+					+e.nav-item
+						+e.A.nav-link(href="#")
+							+e.nav-text Change password
+							+e.nav-arrow
+								+icon('arrow')
+			+e.status
+				+e.status-text
+					strong Your status: 
+					| Standart
+				+e.A.status-btn(href="#")
+					+e.status-name Buy “Premium”
+					+e.status-icon
+						+icon('star')
+			+e.statistics
+				+e.statistics-title.h4 Afrua people
+				+e.statistics-row
+					+e.statistics-left
+						+e.statistics-list
+							+e.statistics-item
+								+e.statistics-label Sign Up:
+								+e.statistics-text 3451
+							+e.statistics-item
+								+e.statistics-label Premium:
+								+e.statistics-text 1382
+							+e.statistics-item
+								+e.statistics-label Online:
+								+e.statistics-text 546
+					+e.statistics-right
+						| Find friends
+			+e.bottom
+				+e.A.logout(href="#") Log out

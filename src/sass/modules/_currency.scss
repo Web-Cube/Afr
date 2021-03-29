@@ -1,0 +1,29 @@
+.currency {
+	&__title {
+		text-align: center;
+	}
+	&__item {
+		margin-top: 10rem;
+		position: relative;
+		font-weight: bold;
+	}
+	
+	&__select {
+		width: 84rem;
+		position: absolute!important;
+		left: 0;
+		top: 0;
+	}
+	.select__arrow {
+		margin-left: 10rem;
+	}
+	
+	.field {
+		&__input {
+			text-align: center;
+			padding-right: 0;
+			padding-left: 84rem;
+			font-weight: bold;
+		}
+	}
+}

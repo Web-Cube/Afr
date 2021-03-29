@@ -17,12 +17,6 @@
 	}
 }
 
-html {
-	&.js-lock {
-		overflow: hidden;
-	}
-}
-
 html{
 	font-size: 1px; // 1rem = 1px
 	
@@ -78,6 +72,15 @@ textarea {
 	-moz-appearance: none;
 	color: inherit;
 	font-family: inherit;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 main {

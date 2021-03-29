@@ -1,0 +1,230 @@
+.account {
+	padding: 10rem 0 20rem 0;
+	
+	&__row {
+		display: flex;
+		margin: 0 -10rem;
+	}
+	
+	&__column {
+		padding: 0 10rem;
+		padding-top: 10rem;
+		&_left {
+			width: 302rem;
+			min-width: 302rem;
+			border-right: 1px solid $default;
+			padding-right: 20rem;
+		}
+		&_center {
+			width: 100%;
+		}
+		&_right {
+			width: 306rem;
+			min-width: 306rem;
+			padding-left: 45rem;
+			border-left: 1px solid $default;
+		}
+	}
+	
+	&__info {
+		&-ava {
+			display: block;
+			width: 85rem;
+			height: 85rem;
+			position: relative;
+			overflow: hidden;
+			border-radius: 100%;
+			margin: 0 auto 10rem auto;
+		}
+		&-title {
+			text-align: center;
+		}
+	}
+	
+	&__nav {
+		padding-bottom: 10rem;
+		border-bottom: 1px solid $gray;
+		margin-top: 6rem;
+		&-item {
+			&:not(:last-child) {
+				margin-bottom: 10rem;
+			}
+		}
+		&-link {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			transition: ease .2s;
+			color: $gray;
+			&:hover, &.is-active {
+				color: $default;
+				.account {
+					&__nav {
+						&-icon {
+							fill: $default;
+						}
+						&-arrow {
+							stroke: $default;
+						}
+					}
+				}
+			}
+		}
+		&-arrow {
+			width: 10rem;
+			height: 18rem;
+			min-width: 10rem;
+			margin-left: 10rem;
+			stroke: $gray;
+			transition: ease .2s;
+		}
+		&-left {
+			display: flex;
+			align-items: center;
+		}
+		&-icon {
+			width: 20rem;
+			height: 20rem;
+			min-width: 20rem;
+			margin-left: 3rem;
+			fill: $gray;
+			transition: ease .2s;
+		}
+	}
+	
+	&__settings {
+		margin-top: 6rem;
+		&-title {
+			text-align: center;
+		}
+	}
+	
+	&__status {
+		margin-top: 10rem;
+		text-align: center;
+		padding-bottom: 10rem;
+		border-bottom: 1px solid $gray;
+		&-btn {
+			display: inline-flex;
+			background: #000;
+			align-items: center;
+			height: 24rem;
+			color: #fff;
+			border-radius: 20rem;
+			padding: 0 15rem;
+			font-weight: bold;
+			padding-bottom: 2rem;
+			margin-top: 2rem;
+		}
+		&-icon {
+			width: 20rem;
+			height: 20rem;
+			min-width: 20rem;
+			margin-left: 5rem;
+			fill: #fff;
+		}
+	}
+	
+	&__statistics {
+		margin-top: 10rem;
+		box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.25);
+		border-radius: 20rem;
+		overflow: hidden;
+		&-title {
+			text-align: center;
+		}
+		&-list {
+			padding: 5rem 10rem;
+		}
+		&-item {
+			display: flex;
+			&:not(:last-child) {
+				margin-bottom: 10rem;
+			}
+		}
+		&-label {
+			color: $gray;
+			font-weight: bold;
+			width: 106rem;
+			min-width: 106rem;
+		}
+		&-bottom {
+			display: flex;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			height: 24rem;
+			background: $default;
+			color: $base;
+			font-weight: bold;
+		}
+	}
+	
+	&__logout {
+		margin-top: 10rem;
+		padding-top: 10rem;
+		border-top: 1px solid $gray;
+		color: $gray;
+		text-align: center;
+		transition: ease .15s;
+		&:hover {
+			color: $default;
+		}
+	}
+	
+	&__banner {
+		display: block;
+		margin-top: 54rem;
+		position: relative;
+		margin-left: -30rem;
+		text-align: center;
+		font-weight: bold;
+		font-size: 48rem;
+		line-height: 55/48*1;
+		color: $base;
+		&-img {
+			display: block;
+			position: relative;
+			overflow: hidden;
+			padding-top: 592/270*100%;
+		}
+		&-top {
+			display: block;
+			position: absolute;
+			z-index: 2;
+			top: 14rem;
+			left: 0;
+			width: 100%;
+		}
+		&-title {
+			display: block;
+		}
+		&-price {
+			color: $red;
+			display: block;
+		}
+		&-time {
+			font-weight: normal;
+			display: block;
+		}
+		&-status {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 75rem;
+			background: $red;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	
+	&__currency {
+		margin-top: 20rem;
+	}
+	
+	&__weather {
+		margin-top: 20rem;
+	}
+}

@@ -1,0 +1,31 @@
+.exchange {
+	table, tr, thead, td, th {
+		border-collapse: collapse;
+	}
+	table {
+		width: 100%;
+		margin-top: 20rem;
+		font-size: 14rem;
+		line-height: 16/14*1;
+	}
+	td, th {
+		&:not(:first-child) {
+			text-align: center;
+		}
+	}
+	th {
+		font-weight: normal;
+	}
+	td {
+		padding-top: 10rem;
+	}
+	
+	&__add {
+		display: inline-flex;
+		margin-top: 10rem;
+		margin-left: 20rem;
+		font-size: 14rem;
+		line-height: 16/14*1;
+		font-weight: bold;
+	}
+}

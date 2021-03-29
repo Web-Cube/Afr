@@ -1,0 +1,196 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Pesronal information';
+
+block content
+	+b.head-page.hide
+		+e.wrap.wrap
+			+e.row._contact.flex
+				+e.column._left.is-personal
+					+e.H1.title.h1 Martin Scott
+				+e.column._right.is-personal
+					+e.top.is-discussion
+						+e.search-form.search-form__.is-discussion
+							+e.field.field__
+								+e.INPUT.input(type="text", name="search" placeholder="Search (enter your search term or hashtag)")
+							+e.BUTTON.btn
+								+icon('search')
+	+b.account
+		+e.wrap.wrap
+			+e.row
+				+e.column._left
+					+e.info
+						+e.info-ava
+							img.object-fit(src="/img/ava1.jpg")
+						+e.info-title.h4 Account
+						+e.nav
+							+e.nav-item
+								+e.A.nav-link(href="#")
+									+e.nav-left
+										+e.nav-text Favorive
+									+e.nav-arrow
+										+icon('arrow')
+							+e.nav-item
+								+e.A.nav-link(href="#")
+									+e.nav-left
+										+e.nav-text Notifications+1
+									+e.nav-arrow
+										+icon('arrow')
+							+e.nav-item
+								+e.A.nav-link(href="#")
+									+e.nav-left
+										+e.nav-text Message+1
+										+e.nav-icon
+											+icon('star')
+									+e.nav-arrow
+										+icon('arrow')
+							+e.nav-item
+								+e.A.nav-link(href="#")
+									+e.nav-left
+										+e.nav-text Friends+2
+										+e.nav-icon
+											+icon('star')
+									+e.nav-arrow
+										+icon('arrow')
+					+e.settings
+						+e.settings-title.h4 Settings
+						+e.nav
+							+e.nav-item
+								+e.A.nav-link.is-active(href="#")
+									+e.nav-text Personal information
+									+e.nav-arrow
+										+icon('arrow')
+							+e.nav-item
+								+e.A.nav-link(href="#")
+									+e.nav-text Change password
+									+e.nav-arrow
+										+icon('arrow')
+					+e.status
+						+e.status-text
+							strong Your status: 
+							| Standart
+						+e.A.status-btn(href="#")
+							+e.status-name Buy “Premium”
+							+e.status-icon
+								+icon('star')
+					+e.statistics
+						+e.statistics-title.h4 Afrua people
+						+e.statistics-list
+							+e.statistics-item
+								+e.statistics-label Sign Up:
+								+e.statistics-text 3451
+							+e.statistics-item
+								+e.statistics-label Premium:
+								+e.statistics-text 1382
+							+e.statistics-item
+								+e.statistics-label Online:
+								+e.statistics-text 546
+						+e.statistics-bottom
+							| Find friends
+					+e.logout
+						a(href="#") Log out
+				+e.column._center
+					| 
+				+e.column._right
+					+e.exchange.exchange__
+						+e.title.h4 Exchange Rates to UAH
+						table
+							thead
+								tr
+									th
+									th Purchase
+									th Sale
+									th NBU
+							tr
+								td
+									strong EUR
+								td
+									strong 33.20
+								td
+									strong 34.00
+								td
+									strong 33.56
+							tr
+								td
+									strong USD
+								td
+									strong 28.05
+								td
+									strong 28.70
+								td
+									strong 28.31
+							tr
+								td
+									strong GBP
+								td
+									strong 38.11
+								td
+									strong 41.14
+								td
+									strong 39.80
+						+e.A.add(href="#") +Add currency
+					+e.currency.currency__
+						+e.title.h4 Currency Converter
+						+e.list
+							+e.item
+								+e.select.select__.js-select
+									+e.INPUT.input.js-select-input(type="hidden" value="USD")
+									+e.head.js-select-head
+										+e.label.js-select-label USD
+										+e.arrow
+											+icon('downArrow')
+									+e.body
+										+e.list
+											+e.item.js-select-item(data-value="EUR") EUR
+											+e.item.js-select-item(data-value="GBP") GBP
+											+e.item.js-select-item(data-value="UAH") UAH
+											+e.item.js-select-item.is-active(data-value="USD") USD
+								+e.field.field__
+									+e.INPUT.input(type="number" value="1")
+							+e.item
+								+e.select.select__.js-select
+									+e.INPUT.input.js-select-input(type="hidden" value="UAH")
+									+e.head.js-select-head
+										+e.label.js-select-label UAH
+										+e.arrow
+											+icon('downArrow')
+									+e.body
+										+e.list
+											+e.item.js-select-item(data-value="EUR") EUR
+											+e.item.js-select-item(data-value="GBP") GBP
+											+e.item.js-select-item.is-active(data-value="UAH") UAH
+											+e.item.js-select-item(data-value="USD") USD
+								+e.field.field__
+									+e.INPUT.input(type="number" value="28.31")
+					+e.weather.weather__
+						+e.top
+							+e.title.h4 Weather in
+							+e.select.select__.js-select
+								+e.INPUT.input.js-select-input(type="hidden" value="Odessa")
+								+e.head.js-select-head
+									+e.label.js-select-label Odessa
+									+e.arrow
+										+icon('downArrow')
+								+e.body
+									+e.list
+										+e.item.js-select-item.is-active(data-value="Odessa") Odessa
+										+e.item.js-select-item(data-value="Kyiv") Kyiv
+										+e.item.js-select-item(data-value="Kremenchuk") Kremenchuk
+						+e.bottom
+							+e.img
+								+icon('weather')
+							+e.info
+								+e.grade +12°C
+								+e.status.h3 Cloudy
+					+e.A.banner(href="#")
+						+e.banner-img
+							img.object-fit(src="/img/banner_currency.jpg")
+						+e.banner-top
+							+e.banner-title
+								| Big Texas 
+								br
+								| Burger
+							+e.banner-price 142UAH
+							+e.banner-time Only 1 week
+						+e.banner-status To order

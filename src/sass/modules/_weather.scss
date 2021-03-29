@@ -1,0 +1,31 @@
+.weather {
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__select {
+		width: 136rem;
+		font-size: 18rem;
+		line-height: 21/18*1;
+	}
+	
+	&__bottom {
+		display: flex;
+		margin-top: 10rem;
+		align-items: center;
+	}
+	&__img {
+		width: 100rem;
+		min-width: 100rem;
+		margin-right: 10rem;
+		fill: $default;
+	}
+	
+	&__grade {
+		font-size: 48rem;
+		line-height: 55/48*1;
+		font-weight: bold;
+		margin-bottom: 8rem;
+	}
+}

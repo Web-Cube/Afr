@@ -21,6 +21,17 @@ var defaults = {
 			});
 			return false;
 		});
+		
+		$('.js-mobile-close').click(function(){
+			$('.js-mobile').removeClass('is-active');
+			$('html').removeClass('is-lock');
+		});
+		
+		$('.js-mobile-show').click(function(){
+			$('.js-mobile').addClass('is-active');
+			$('html').addClass('is-lock');
+		});
+		
 	},
 	
 	selectToggle: (e) => {
