@@ -1,7 +1,7 @@
 extends ../layouts/base
 
 append vars
-	- title = 'Notifications';
+	- title = 'Friends';
 
 block content
 	+b.head-page.hide
@@ -32,7 +32,7 @@ block content
 									+e.nav-arrow
 										+icon('arrow')
 							+e.nav-item
-								+e.A.nav-link.is-active(href="#")
+								+e.A.nav-link(href="#")
 									+e.nav-left
 										+e.nav-text Notifications+1
 									+e.nav-arrow
@@ -46,7 +46,7 @@ block content
 									+e.nav-arrow
 										+icon('arrow')
 							+e.nav-item
-								+e.A.nav-link(href="#")
+								+e.A.nav-link.is-active(href="#")
 									+e.nav-left
 										+e.nav-text Friends+2
 										+e.nav-icon
@@ -91,52 +91,106 @@ block content
 					+e.logout
 						a(href="#") Log out
 				+e.column._center
-					+e.notifications.notifications__
-						+e.title.h3 Notifications
-						+e.nav
-							+e.nav-item
-								+e.nav-link.is-active(href="#") All
-							+e.nav-item
-								+e.nav-link(href="#") New
-							+e.nav-item
-								+e.nav-link(href="#") Viewed
-							+e.nav-item
-								+e.nav-btn(href="#")  Select all •
-							+e.nav-item
-								+e.nav-btn(href="#")  Delete
+					+e.friends.friends__
+						+e.top
+							+e.title.h3 Friends
+							+e.A.search-btn(href="#")
+								+icon('search')
+							+e.A.button.button(href="#") Find new friends
+						+e.action
+							+e.nav
+								+e.nav-item
+									+e.nav-link.is-active(href="#") All
+								+e.nav-item
+									+e.nav-link(href="#") Online 1
+								+e.nav-item
+									+e.nav-link(href="#") Request+1
+							+e.search-form.search-form__._small
+								+e.field.field__
+									+e.INPUT.input(type="text", name="search" placeholder="Search friend")
+								+e.BUTTON.btn
+									+icon('search')
 						+e.list
+							+e.item.new
+								+e.item-left
+									+e.A.ava(href="#")
+										img.object-fit(src="/img/ava6.jpg")
+									+e.info
+										strong Alan Cooper 
+										em 27 years 
+										br
+										strong.gray From: 
+										em Canada 
+										br
+										strong.gray Now: 
+										| Kyiv, Ukraine
+								+e.item-right
+									+e.A.item-btn.button-border.mobile-hide(href="#") Message
+									+e.A.delete.mobile-hide(href="#") Delete
+									+e.A.item-mess.mobile-show(href="#")
+										+icon('email')
+									+e.A.item-user.mobile-show(href="#")
+										+icon('userFriend')
 							+e.item
-								+e.LABEL.checkbox
-									+e.INPUT.checkbox-input(type="checkbox" name="notifications")
-									+e.SPAN.checkbox-text You have a new reply to a comment
-									+e.SPAN.checkbox-date 11:34
-									+e.A.checkbox-delete(href="#") Delete
-									+e.SPAN.checkbox-icon
-										+icon('bookmark')
+								+e.item-left
+									+e.A.ava(href="#")
+										img.object-fit(src="/img/ava7.jpg")
+									+e.info
+										strong Simon Boang 
+										em 24 years 
+										br
+										strong.gray From: 
+										em Canada 
+										br
+										strong.gray Now: 
+										| Kyiv, Ukraine
+								+e.item-right
+									+e.A.item-btn.button-border.mobile-hide(href="#") Message
+									+e.A.delete.mobile-hide(href="#") Delete
+									+e.A.item-mess.mobile-show(href="#")
+										+icon('email')
+									+e.A.item-user.mobile-show(href="#")
+										+icon('userFriend')
 							+e.item
-								+e.LABEL.checkbox
-									+e.INPUT.checkbox-input(type="checkbox" name="notifications")
-									+e.SPAN.checkbox-text You have a new reply to a comment
-									+e.SPAN.checkbox-date 09:26
-									+e.A.checkbox-delete(href="#") Delete
-									+e.SPAN.checkbox-icon
-										+icon('bookmark')
+								+e.item-left
+									+e.A.ava(href="#")
+										img.object-fit(src="/img/ava5.jpg")
+									+e.info
+										strong Anna Kurt 
+										em 21 years 
+										br
+										strong.gray From: 
+										em Canada 
+										br
+										strong.gray Now: 
+										| Kyiv, Ukraine
+								+e.item-right
+									+e.A.item-btn.button-border.mobile-hide(href="#") Message
+									+e.A.delete.mobile-hide(href="#") Delete
+									+e.A.item-mess.mobile-show(href="#")
+										+icon('email')
+									+e.A.item-user.mobile-show(href="#")
+										+icon('userFriend')
 							+e.item
-								+e.LABEL.checkbox.new
-									+e.INPUT.checkbox-input(type="checkbox" name="notifications")
-									+e.SPAN.checkbox-text You have a new reply to a comment
-									+e.SPAN.checkbox-date 28.01
-									+e.A.checkbox-delete(href="#") Delete
-									+e.SPAN.checkbox-icon
-										+icon('bookmark')
-							+e.item
-								+e.LABEL.checkbox
-									+e.INPUT.checkbox-input(type="checkbox" name="notifications" checked)
-									+e.SPAN.checkbox-text You have a new reply to a comment
-									+e.SPAN.checkbox-date 26.01
-									+e.A.checkbox-delete(href="#") Delete
-									+e.SPAN.checkbox-icon
-										+icon('bookmark')
+								+e.item-left
+									+e.A.ava(href="#")
+										img.object-fit(src="/img/ava5.jpg")
+									+e.info
+										strong Anna Kurt 
+										em 21 years 
+										br
+										strong.gray From: 
+										em Canada 
+										br
+										strong.gray Now: 
+										| Kyiv, Ukraine
+								+e.item-right
+									+e.A.item-btn.button-border.mobile-hide(href="#") Message
+									+e.A.add.mobile-hide(href="#") Add
+									+e.A.item-mess.mobile-show(href="#")
+										+icon('email')
+									+e.A.item-user.mobile-show(href="#")
+										+icon('userAdd')
 				+e.column._right
 					+e.exchange.exchange__
 						+e.title.h4 Exchange Rates to UAH

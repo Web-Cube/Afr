@@ -1,0 +1,203 @@
+.message {
+	&__nav {
+		display: flex;
+		align-items: center;
+		list-style: none;
+		
+		&-item {
+			&:not(:last-child) {
+				margin-right: 20rem;
+			}
+		}
+		&-link {
+			display: inline-flex;
+			position: relative;
+			padding-bottom: 2rem;
+			margin-top: 2rem;
+			&.is-active {
+				font-weight: bold;
+				text-decoration: none!important;
+				&:after {
+					content: '';
+					display: block;
+					width: 100%;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					height: 2px;
+					background: $default;
+				}
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		
+		&-btn {
+			color: $gray;
+			font-size: 14rem;
+			line-height: 16/14*1;
+			font-weight: 300;
+			transition: ease .2s;
+			padding-top: 2rem;
+			display: inline-flex;
+			&:hover {
+				color: $default;
+			}
+		}
+	}
+	
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 13rem;
+	}
+	
+	&__link {
+		font-weight: bold;
+	}
+	
+	&__list {
+		margin-top: 10rem;
+	}
+	
+	&__item {
+		border-bottom: 1px solid $gray;
+		position: relative;
+	}
+	
+	&__box {
+		display: flex;
+		padding: 10rem 0;
+		position: relative;
+		&.new {
+			&:before {
+				content: '•';
+				font-size: 36rem;
+				line-height: 1;
+				font-weight: bold;
+				display: block;
+				position: absolute;
+				left: -22rem;
+				top: 50%;
+				margin-top: -18rem;
+			}
+		}
+	}
+	&__ava {
+		width: 75rem;
+		height: 75rem;
+		min-width: 75rem;
+		position: relative;
+		overflow: hidden;
+		display: block;
+		border-radius: 100%;
+		margin-right: 10rem;
+	}
+	
+	&__desc {
+		display: block;
+		font-weight: 500;
+		font-style: italic;
+		padding-right: 30rem;
+	}
+	
+	&__info {
+		width: 100%;
+		display: block;
+		font-size: 14rem;
+		line-height: 16/14*1;
+		&-top {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	
+	&__name {
+		font-weight: bold;
+		margin-right: 15rem;
+	}
+	
+	&__date {
+		margin-right: 15rem;
+	}
+	
+	&__checkbox {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		width: 12rem;
+		height: 24rem;
+		margin-top: -12rem;
+		display: block;
+		cursor: pointer;
+		&-icon {
+			fill: $gray;
+		}
+		&-input {
+			display: none;
+			&:checked + .message__checkbox-icon {
+				fill: $default;
+			}
+		}
+	}
+	
+	&__bottom-nav {
+		display: none;
+	}
+	
+	@include max-screen($small_tablet) {
+		&__list {
+			margin-left: 10rem;
+		}
+		&__box {
+			&.new {
+				&:before {
+					left: -18rem;
+					font-size: 24rem;
+					margin-top: -12rem;
+				}
+			}
+		}
+	}
+	
+	@include max-screen($small_mobile) {
+		&__top {
+			display: none;
+		}
+		&__title {
+			font-size: 24rem;
+		}
+		&__bottom-nav {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 15rem;
+		}
+		&__select {
+			width: 48%;
+			text-align: center;
+		}
+		.select {
+			&__head {
+				padding-left: 20rem;
+			}
+			&__label {
+				font-weight: bold;
+			}
+			&__body {
+				padding-right: 20rem;
+				padding-left: 0;
+			}
+		}
+		&__bottom-btn {
+			width: 48%;
+		}
+		&__desc {
+			padding-right: 0;
+		}
+		&__checkbox {
+			display: none;
+		}
+	}
+}

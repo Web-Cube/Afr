@@ -1,0 +1,222 @@
+.friends {
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__button {
+		padding: 0 8rem 2rem 8rem;
+		font-size: 18rem;
+	}
+	
+	&__nav {
+		display: flex;
+		align-items: center;
+		list-style: none;
+		
+		&-item {
+			&:not(:last-child) {
+				margin-right: 20rem;
+			}
+		}
+		&-link {
+			display: inline-flex;
+			position: relative;
+			padding-bottom: 2rem;
+			margin-top: 2rem;
+			&.is-active {
+				font-weight: bold;
+				text-decoration: none!important;
+				&:after {
+					content: '';
+					display: block;
+					width: 100%;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					height: 2px;
+					background: $default;
+				}
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	
+	&__action {
+		margin-top: 15rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	.search-form {
+		&_small {
+			width: 210rem;
+		}
+	}
+	
+	&__list {
+		margin-top: 10rem;
+	}
+	
+	&__item {
+		padding: 10rem 0;
+		border-bottom: 1px solid $gray;
+		display: flex;
+		align-items: center;
+		position: relative;
+		&.new {
+			&:before {
+				content: '•';
+				font-size: 36rem;
+				line-height: 1;
+				font-weight: bold;
+				display: block;
+				position: absolute;
+				left: -22rem;
+				top: 50%;
+				margin-top: -18rem;
+			}
+		}
+		&-left, &-right {
+			display: flex;
+			align-items: center;
+		}
+		&-left {
+			width: 100%;
+		}
+		&-right {
+			width: 201rem;
+			min-width: 201rem;
+			justify-content: space-between;
+		}
+		&-btn {
+			width: 137rem;
+			padding: 0 10rem 2rem 10rem;
+			font-size: 18rem;
+		}
+		.mobile-show {
+			display: none;
+		}
+		&-mess {
+			width: 30rem;
+			min-width: 30rem;
+			height: 30rem;
+			fill: $default;
+		}
+		&-user {
+			width: 30rem;
+			min-width: 30rem;
+			height: 30rem;
+			fill: $default;
+		}
+	}
+	
+	&__ava {
+		width: 75rem;
+		height: 75rem;
+		min-width: 75rem;
+		position: relative;
+		overflow: hidden;
+		display: block;
+		border-radius: 100%;
+		margin-right: 10rem;
+	}
+	
+	&__info {
+		display: block;
+		width: 100%;
+		font-size: 14rem;
+		line-height: 16/14*1;
+		.gray {
+			color: $gray;
+		}
+	}
+	
+	&__delete, &__add {
+		font-size: 14rem;
+		line-height: 16/14*1;
+		transition: ease .15s;
+	}
+	&__delete {
+		font-weight: 300;
+		color: $gray;
+		&:hover {
+			color: $default;
+		}
+	}
+	&__add {
+		font-weight: 500;
+	}
+	
+	&__search-btn {
+		display: none;
+		width: 30rem;
+		min-width: 30rem;
+		height: 30rem;
+	}
+	
+	@include max-screen($small_tablet) {
+		&__list {
+			margin-left: 10rem;
+		}
+		&__item {
+			&.new {
+				&:before {
+					left: -18rem;
+					font-size: 24rem;
+					margin-top: -12rem;
+				}
+			}
+		}
+	}
+	
+	@include max-screen($small_mobile) {
+		&__list {
+			margin-top: 0;
+			margin-left: 0;
+		}
+		&__item {
+			padding-left: 18rem;
+			&-right {
+				width: 80rem;
+				min-width: 80rem;
+			}
+			.mobile-hide {
+				display: none!important;
+			}
+			.mobile-show {
+				display: block;
+			}
+			&.new {
+				&:before {
+					left: 0;
+				}
+			}
+		}
+		
+		&__search-btn {
+			display: block;
+		}
+		
+		&__title {
+			font-size: 24rem;
+		}
+		.search-form {
+			&_small {
+				display: none;
+			}
+		}
+		
+		&__action {
+			margin-top: 10rem;
+		}
+		&__nav {
+			justify-content: space-between;
+			width: 100%;
+			font-size: 18rem;
+		}
+	}
+}

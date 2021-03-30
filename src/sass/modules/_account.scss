@@ -248,6 +248,11 @@
 		margin: auto;
 	}
 	
+	&__message, &__friends {
+		max-width: 460rem;
+		margin: auto;
+	}
+	
 	@include max-screen($small_tablet) {
 		&__column {
 			&_left {
@@ -259,7 +264,7 @@
 				padding-left: 20rem;
 			}
 		}
-		&__personal, &__change-password, &__favorite, &__notifications {
+		&__personal, &__change-password, &__favorite, &__notifications, &__message, &__friends {
 			margin-left: 0;
 		}
 		&__banner {

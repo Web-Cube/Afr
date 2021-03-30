@@ -17,4 +17,16 @@
 		top: 3rem;
 		fill: $default;
 	}
+	
+	&_small {
+		.search-form__btn {
+			width: 12rem;
+			height: 12rem;
+			left: 10rem;
+			top: 6rem;
+		}
+		.field__input {
+			padding-left: 32rem;
+		}
+	}
 }

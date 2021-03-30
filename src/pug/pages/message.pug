@@ -1,7 +1,7 @@
 extends ../layouts/base
 
 append vars
-	- title = 'Notifications';
+	- title = 'Message';
 
 block content
 	+b.head-page.hide
@@ -32,13 +32,13 @@ block content
 									+e.nav-arrow
 										+icon('arrow')
 							+e.nav-item
-								+e.A.nav-link.is-active(href="#")
+								+e.A.nav-link(href="#")
 									+e.nav-left
 										+e.nav-text Notifications+1
 									+e.nav-arrow
 										+icon('arrow')
 							+e.nav-item
-								+e.A.nav-link(href="#")
+								+e.A.nav-link.is-active(href="#")
 									+e.nav-left
 										+e.nav-text Message+1
 										+e.nav-icon
@@ -91,51 +91,66 @@ block content
 					+e.logout
 						a(href="#") Log out
 				+e.column._center
-					+e.notifications.notifications__
+					+e.message.message__
 						+e.title.h3 Notifications
-						+e.nav
-							+e.nav-item
-								+e.nav-link.is-active(href="#") All
-							+e.nav-item
-								+e.nav-link(href="#") New
-							+e.nav-item
-								+e.nav-link(href="#") Viewed
-							+e.nav-item
-								+e.nav-btn(href="#")  Select all •
-							+e.nav-item
-								+e.nav-btn(href="#")  Delete
+						+e.top
+							+e.nav
+								+e.nav-item
+									+e.nav-link.is-active(href="#") All
+								+e.nav-item
+									+e.nav-link(href="#") New
+								+e.nav-item
+									+e.nav-link(href="#") Viewed
+								+e.nav-item
+									+e.nav-btn(href="#")  Select all •
+								+e.nav-item
+									+e.nav-btn(href="#")  Delete
+							+e.A.link(href="#") +Message
+						+e.bottom-nav
+							+e.select.select__.js-select
+								+e.INPUT.input.js-select-input(type="hidden")
+								+e.head.js-select-head
+									+e.label.js-select-label All
+									+e.arrow
+										+icon('downArrow')
+								+e.body
+									+e.list
+										+e.item.js-select-item.is-active(data-value="All") All
+										+e.item.js-select-item(data-value="New") New
+										+e.item.js-select-item(data-value="Viewed") Viewed
+										+e.item.js-select-item(data-value="Select all") Select all
+										+e.item.js-select-item(data-value="Delete") Delete
+							+e.A.bottom-btn.button(href="#") Message
 						+e.list
 							+e.item
+								+e.A.box.new(href="#")
+									+e.ava
+										img.object-fit(src="/img/ava6.jpg")
+									+e.info
+										+e.info-top
+											+e.name Alan Cooper
+											+e.date 03.02.2021
+											+e.time 19:47
+										+e.desc
+											| Hi! How are you?
 								+e.LABEL.checkbox
-									+e.INPUT.checkbox-input(type="checkbox" name="notifications")
-									+e.SPAN.checkbox-text You have a new reply to a comment
-									+e.SPAN.checkbox-date 11:34
-									+e.A.checkbox-delete(href="#") Delete
-									+e.SPAN.checkbox-icon
+									+e.INPUT.checkbox-input(type="checkbox")
+									+e.checkbox-icon
 										+icon('bookmark')
 							+e.item
+								+e.A.box(href="#")
+									+e.ava
+										img.object-fit(src="/img/ava3.jpg")
+									+e.info
+										+e.info-top
+											+e.name Melissa Adams
+											+e.date 03.02.2021
+											+e.time 19:47
+										+e.desc
+											| Yes, it’s cool!
 								+e.LABEL.checkbox
-									+e.INPUT.checkbox-input(type="checkbox" name="notifications")
-									+e.SPAN.checkbox-text You have a new reply to a comment
-									+e.SPAN.checkbox-date 09:26
-									+e.A.checkbox-delete(href="#") Delete
-									+e.SPAN.checkbox-icon
-										+icon('bookmark')
-							+e.item
-								+e.LABEL.checkbox.new
-									+e.INPUT.checkbox-input(type="checkbox" name="notifications")
-									+e.SPAN.checkbox-text You have a new reply to a comment
-									+e.SPAN.checkbox-date 28.01
-									+e.A.checkbox-delete(href="#") Delete
-									+e.SPAN.checkbox-icon
-										+icon('bookmark')
-							+e.item
-								+e.LABEL.checkbox
-									+e.INPUT.checkbox-input(type="checkbox" name="notifications" checked)
-									+e.SPAN.checkbox-text You have a new reply to a comment
-									+e.SPAN.checkbox-date 26.01
-									+e.A.checkbox-delete(href="#") Delete
-									+e.SPAN.checkbox-icon
+									+e.INPUT.checkbox-input(type="checkbox")
+									+e.checkbox-icon
 										+icon('bookmark')
 				+e.column._right
 					+e.exchange.exchange__
