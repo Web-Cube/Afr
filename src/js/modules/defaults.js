@@ -136,7 +136,7 @@ var defaults = {
 		
 		$(document).on('click', '.js-toggle-head', defaults.toggle);
 		
-		if ( $(window).innerWidth() < 441 ) {
+		if ( $(window).innerWidth() < 770 ) {
 			$(document).on('click', '.js-accordion-head', defaults.mobileAccordion);
 		}
 

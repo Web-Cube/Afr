@@ -1,0 +1,245 @@
+.personal {
+	&__text {
+		color: $gray;
+		font-size: 14rem;
+		line-height: 16/14*1;
+		margin-top: 6rem;
+	}
+	&__section {
+		margin-top: 20rem;
+		&-head {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		&-arrow {
+			width: 18rem;
+			height: 10rem;
+			min-width: 18rem;
+			margin-left: 15rem;
+			stroke: $gray;
+			transition: ease .2s;
+			display: none;
+		}
+	}
+	
+	&__ava {
+		margin-top: 6rem;
+		display: flex;
+		align-items: center;
+		&-img {
+			width: 85rem;
+			height: 85rem;
+			min-width: 85rem;
+			margin-right: 10rem;
+			position: relative;
+			overflow: hidden;
+			border-radius: 100%;
+		}
+	}
+	
+	&__load {
+		position: relative;
+		margin-right: 10rem;
+		&-input {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			cursor: pointer;
+		}
+		&-btn {
+			padding: 0 20rem;
+		}
+	}
+	&__delete, &__cancel {
+		color: $gray;
+		font-size: 14rem;
+		line-height: 16/14*1;
+	}
+	
+	&__cancel {
+		margin-right: 10rem;
+	}
+	
+	&__field {
+		margin-top: 10rem;
+	}
+	
+	&__row {
+		margin-left: -10rem;
+		margin-top: -4rem;
+	}
+	
+	&__column {
+		margin-left: 10rem;
+		&_col4 {
+			width: calc( 25% - 10rem );
+		}
+		&_col3 {
+			width: calc( 33.33% - 10rem );
+		}
+		&_col2 {
+			width: calc( 50% - 10rem );
+		}
+		&_col1 {
+			width: calc( 100% - 10rem );
+		}
+	}
+	
+	&__plus {
+		display: inline-flex;
+		margin-top: 23rem;
+		font-size: 24rem;
+		line-height: 28/24*1;
+		font-weight: bold;
+		color: transparent;
+		&:before {
+			content: '+';
+			color: $default;
+		}
+	}
+	
+	&__radio {
+		cursor: pointer;
+		&-input {
+			display: none;
+			&:checked + .personal__radio-text {
+				font-weight: bold;
+				color: $default;
+			}
+		}
+		&-list {
+			margin-top: 6rem;
+			font-size: 14rem;
+			line-height: 16/14*1;
+			font-weight: bold;
+		}
+		&-text {
+			color: $gray;
+			font-weight: normal;
+		}
+	}
+	
+	&__buttons {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin-top: 20rem;
+		&.show {
+			display: none;
+		}
+	}
+	
+	@include max-screen($small_tablet) {
+		&__top {
+			display: none;
+			
+			& + .personal__section {
+				padding-bottom: 10rem;
+				border-bottom: 0;
+			}
+		}
+		&__section {
+			margin-top: 0;
+			padding: 0;
+			border-bottom: 1px solid $gray;
+			&-head {
+				padding: 10rem 0;
+			}
+			&-arrow {
+				display: block;
+			}
+			&-body {
+				display: none;
+				padding-bottom: 10rem;
+				margin-top: -10rem;
+			}
+			&.is-active {
+				.personal__section-arrow {
+					transform: rotate(180deg);
+				}
+			}
+		}
+		&__buttons {
+			&.hide {
+				display: none;
+			}
+			&.show {
+				display: flex;
+				margin-top: 10rem;
+			}
+		}
+	}
+	
+	@include max-screen($small_mobile) {
+		&__column {
+			&_center {
+				padding-top: 0;
+			}
+		}
+		&__top {
+			display: block;
+			& + .personal__section {
+				margin-top: 10rem;
+				padding-bottom: 5rem;
+			}
+		}
+		&__title {
+			font-size: 24rem;
+		}
+		&__text {
+			display: none;
+		}
+		&__plus {
+			margin-top: 10rem;
+			color: $default;
+			font-size: 14rem;
+			line-height: 16/14*1;
+		}
+		&__cancel, &__button {
+			width: 25%;
+		}
+		&__cancel {
+			text-align: right;
+			margin-right: 3rem;
+			padding-right: 5rem;
+		}
+		.field {
+			&__input {
+				padding: 0 8rem;
+			}
+			&__label {
+				padding-left: 8rem;
+			}
+		}
+		.select {
+			&__head {
+				padding-left: 8rem;
+			}
+			&__body {
+				padding-left: 8rem;
+			}
+		}
+		&__row {
+			margin-left: -3rem;
+		}
+		&__column {
+			margin-left: 3rem;
+			&_col1 {
+				width: calc( 100% - 3rem );
+			}
+			&_col2 {
+				width: calc( 50% - 3rem );
+			}
+			&_col3 {
+				width: calc( 33.33% - 3rem );
+			}
+			&_col4 {
+				width: calc( 25% - 3rem );
+			}
+		}
+	}
+}

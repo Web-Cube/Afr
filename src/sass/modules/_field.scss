@@ -71,6 +71,19 @@
 		}
 	}
 	
+	&__label {
+		display: block;
+		color: $gray;
+		font-size: 14rem;
+		line-height: 16/14*1;
+		font-weight: 300;
+		padding-left: 12rem;
+	}
+	
+	&__select {
+		width: 100%;
+	}
+	
 	&.error {
 		.field {
 			&__input, &__textarea {

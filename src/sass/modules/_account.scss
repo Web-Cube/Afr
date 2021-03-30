@@ -227,4 +227,42 @@
 	&__weather {
 		margin-top: 20rem;
 	}
+	
+	&__personal {
+		max-width: 440rem;
+		margin: auto;
+	}
+	
+	@include max-screen($small_tablet) {
+		&__column {
+			&_left {
+				display: none;
+			}
+			&_right {
+				width: 270rem;
+				min-width: 270rem;
+				padding-left: 20rem;
+			}
+		}
+		&__personal {
+			margin-left: 0;
+		}
+		&__banner {
+			margin-left: -8rem;
+			font-size: 40rem;
+			&-status {
+				font-size: 48rem;
+			}
+		}
+	}
+	
+	@include max-screen($small_mobile) {
+		padding-top: 0;
+		&__column {
+			padding-top: 0;
+			&_right {
+				display: none;
+			}
+		}
+	}
 }

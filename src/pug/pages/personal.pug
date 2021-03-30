@@ -6,7 +6,7 @@ append vars
 block content
 	+b.head-page.hide
 		+e.wrap.wrap
-			+e.row._contact.flex
+			+e.row._account.flex
 				+e.column._left.is-personal
 					+e.H1.title.h1 Martin Scott
 				+e.column._right.is-personal
@@ -91,7 +91,237 @@ block content
 					+e.logout
 						a(href="#") Log out
 				+e.column._center
-					| 
+					+e.FORM.personal.personal__(action="#")
+						+e.top
+							+e.H3.title.h3 Pesronal information
+							+e.text Click on a field to change
+						+e.section
+							+e.section-title.h4 Avatar
+							+e.ava
+								+e.ava-img
+									img.object-fit(src="/img/ava1.jpg")
+								+e.load
+									+e.INPUT.load-input(type="file")
+									+e.load-btn.button Load new
+								+e.A.delete(href="#") Delete
+						+e.section.js-accordion-item
+							+e.section-head.js-accordion-head
+								+e.section-title.h4 Contacts
+								+e.section-arrow
+									+icon('downArrow')
+							+e.section-body.js-accordion-body
+								+e.row.flex
+									+e.column._col3
+										+e.field.field__
+											+e.LABEL.label Username
+											+e.INPUT.input(value="Mar.S123")
+									+e.column._col3
+										+e.field.field__
+											+e.LABEL.label Name
+											+e.INPUT.input(value="Martin")
+									+e.column._col3
+										+e.field.field__
+											+e.LABEL.label Surname
+											+e.INPUT.input(value="Scott")
+									+e.column._col2
+										+e.field.field__
+											+e.LABEL.label Phone
+											+e.INPUT.input(value="+38 (088) - 11 - 11 - 111" type="tel")
+									+e.column._col2
+										+e.field.field__
+											+e.LABEL.label E-mail
+											+e.INPUT.input(value="m.scott123@mail.com" type="email")
+								+e.buttons.show
+									+e.A.cancel(href="#") Cancel
+									+e.BUTTON.button.button Save
+						+e.section.js-accordion-item
+							+e.section-head.js-accordion-head
+								+e.section-title.h4 Social
+								+e.section-arrow
+									+icon('downArrow')
+							+e.section-body.js-accordion-body
+								+e.row.flex
+									+e.column._col3
+										+e.field.field__
+											+e.LABEL.label Instagram
+											+e.INPUT.input(value="instagram.com/...")
+									+e.column._col3
+										+e.field.field__
+											+e.LABEL.label Facebook
+											+e.INPUT.input(value="facebook.com/1...")
+									+e.column._col3
+										+e.field.field__
+											+e.LABEL.label Twitter
+											+e.INPUT.input(value="twitter.com/123...")
+									+e.column._col3
+										+e.field.field__
+											+e.LABEL.label Behance
+											+e.INPUT.input(value="behance.net/abc...")
+									+e.column._col3
+										+e.A.plus(href="#") Add social
+								+e.buttons.show
+									+e.A.cancel(href="#") Cancel
+									+e.BUTTON.button.button Save
+						+e.section.js-accordion-item
+							+e.section-head.js-accordion-head
+								+e.section-title.h4 Date of birth
+								+e.section-arrow
+									+icon('downArrow')
+							+e.section-body.js-accordion-body
+								+e.row.flex
+									+e.column._col3
+										+e.field.field__
+											+e.LABEL.label Day
+											+e.INPUT.input(value="15")
+									+e.column._col3
+										+e.field.field__
+											+e.LABEL.label Month
+											+e.INPUT.input(value="May")
+									+e.column._col3
+										+e.field.field__
+											+e.LABEL.label Year
+											+e.INPUT.input(value="1991")
+								+e.buttons.show
+									+e.A.cancel(href="#") Cancel
+									+e.BUTTON.button.button Save
+						+e.section.js-accordion-item
+							+e.section-head.js-accordion-head
+								+e.section-title.h4 Where are you from?
+								+e.section-arrow
+									+icon('downArrow')
+							+e.section-body.js-accordion-body
+								+e.field.field__
+									+e.LABEL.label Your country
+									+e.select.select__.js-select
+										+e.INPUT.input.js-select-input(type="hidden" value="Great Britain")
+										+e.head.js-select-head
+											+e.label.js-select-label Great Britain
+											+e.arrow
+												+icon('downArrow')
+										+e.body
+											+e.list
+												+e.item.js-select-item.is-active(data-value="Great Britain") Great Britain
+												+e.item.js-select-item(data-value="Ukraine") Ukraine
+												+e.item.js-select-item(data-value="USA") USA
+								+e.buttons.show
+									+e.A.cancel(href="#") Cancel
+									+e.BUTTON.button.button Save
+						+e.section.js-accordion-item
+							+e.section-head.js-accordion-head
+								+e.section-title.h4 Are you in the Ukraine?
+								+e.section-arrow
+									+icon('downArrow')
+							+e.section-body.js-accordion-body
+								+e.radio-list
+									+e.LABEL.radio
+										+e.INPUT.radio-input(type="radio" name="in" value="Yes" checked)
+										+e.SPAN.radio-text Yes
+									| /
+									+e.LABEL.radio
+										+e.INPUT.radio-input(type="radio" name="in" value="No")
+										+e.SPAN.radio-text No
+								+e.buttons.show
+									+e.A.cancel(href="#") Cancel
+									+e.BUTTON.button.button Save
+						+e.section.js-accordion-item
+							+e.section-head.js-accordion-head
+								+e.section-title.h4 Your status in Ukraine?
+								+e.section-arrow
+									+icon('downArrow')
+							+e.section-body.js-accordion-body
+								+e.field.field__
+									+e.select.select__.js-select
+										+e.INPUT.input.js-select-input(type="hidden" value="Student")
+										+e.head.js-select-head
+											+e.label.js-select-label Student
+											+e.arrow
+												+icon('downArrow')
+										+e.body
+											+e.list
+												+e.item.js-select-item.is-active(data-value="Student") Student
+												+e.item.js-select-item(data-value="Work") Work
+								+e.buttons.show
+									+e.A.cancel(href="#") Cancel
+									+e.BUTTON.button.button Save
+						+e.section.js-accordion-item
+							+e.section-head.js-accordion-head
+								+e.section-title.h4 Where do you live in Ukraine?
+								+e.section-arrow
+									+icon('downArrow')
+							+e.section-body.js-accordion-body
+								+e.row.flex
+									+e.column._col1
+										+e.field.field__
+											+e.LABEL.label Region/City
+											+e.select.select__.js-select
+												+e.INPUT.input.js-select-input(type="hidden" value="Odessa")
+												+e.head.js-select-head
+													+e.label.js-select-label Odessa
+													+e.arrow
+														+icon('downArrow')
+												+e.body
+													+e.list
+														+e.item.js-select-item.is-active(data-value="Odessa") Odessa
+														+e.item.js-select-item(data-value="Kyiv") Kyiv
+														+e.item.js-select-item(data-value="Dnipro") Dnipro
+									+e.column._col2
+										+e.field.field__
+											+e.LABEL.label Region/City
+											+e.select.select__.js-select
+												+e.INPUT.input.js-select-input(type="hidden" value="Malinovsky")
+												+e.head.js-select-head
+													+e.label.js-select-label Malinovsky
+													+e.arrow
+														+icon('downArrow')
+												+e.body
+													+e.list
+														+e.item.js-select-item.is-active(data-value="Malinovsky") Malinovsky
+														+e.item.js-select-item(data-value="Malinovsky 2") Malinovsky 2
+														+e.item.js-select-item(data-value="Malinovsky 3") Malinovsky 3
+									+e.column._col2
+										+e.field.field__
+											+e.LABEL.label Locality
+											+e.select.select__.js-select
+												+e.INPUT.input.js-select-input(type="hidden" value="-")
+												+e.head.js-select-head
+													+e.label.js-select-label -
+													+e.arrow
+														+icon('downArrow')
+												+e.body
+													+e.list
+														+e.item.js-select-item.is-active(data-value="-") -
+														+e.item.js-select-item(data-value="Malinovsky 2") Malinovsky 2
+														+e.item.js-select-item(data-value="Malinovsky 3") Malinovsky 3
+									+e.column._col2
+										+e.field.field__
+											+e.LABEL.label Street
+											+e.INPUT.input(value="Ocean street")
+									+e.column._col4
+										+e.field.field__
+											+e.LABEL.label House №
+											+e.INPUT.input(value="392")
+									+e.column._col4
+										+e.field.field__
+											+e.LABEL.label APT №
+											+e.INPUT.input(value="14")
+								+e.buttons.show
+									+e.A.cancel(href="#") Cancel
+									+e.BUTTON.button.button Save
+						+e.section.js-accordion-item
+							+e.section-head.js-accordion-head
+								+e.section-title.h4 About you
+								+e.section-arrow
+									+icon('downArrow')
+							+e.section-body.js-accordion-body
+								+e.field.field__
+									+e.TEXTAREA.textarea
+										| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras porta malesuada ex, vitae suscipit sem fermentum ut. Curabitur accumsan faucibus mi in maximus.
+								+e.buttons.show
+									+e.A.cancel(href="#") Cancel
+									+e.BUTTON.button.button Save
+						+e.buttons.hide
+							+e.A.cancel(href="#") Cancel
+							+e.BUTTON.button.button Save
 				+e.column._right
 					+e.exchange.exchange__
 						+e.title.h4 Exchange Rates to UAH
