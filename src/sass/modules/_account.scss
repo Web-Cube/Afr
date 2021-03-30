@@ -243,6 +243,11 @@
 		margin: auto;
 	}
 	
+	&__notifications {
+		max-width: 475rem;
+		margin: auto;
+	}
+	
 	@include max-screen($small_tablet) {
 		&__column {
 			&_left {
@@ -254,7 +259,7 @@
 				padding-left: 20rem;
 			}
 		}
-		&__personal, &__change-password, &__favorite {
+		&__personal, &__change-password, &__favorite, &__notifications {
 			margin-left: 0;
 		}
 		&__banner {

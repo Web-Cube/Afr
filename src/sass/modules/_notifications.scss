@@ -1,0 +1,158 @@
+.notifications {
+	&__nav {
+		display: flex;
+		align-items: center;
+		list-style: none;
+		margin-top: 14rem;
+		
+		&-item {
+			&:not(:last-child) {
+				margin-right: 20rem;
+			}
+		}
+		&-link {
+			display: inline-flex;
+			position: relative;
+			padding-bottom: 2rem;
+			margin-top: 2rem;
+			&.is-active {
+				font-weight: bold;
+				text-decoration: none!important;
+				&:after {
+					content: '';
+					display: block;
+					width: 100%;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					height: 2px;
+					background: $default;
+				}
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		
+		&-btn {
+			color: $gray;
+			font-size: 14rem;
+			line-height: 16/14*1;
+			font-weight: 300;
+			transition: ease .2s;
+			padding-top: 2rem;
+			display: inline-flex;
+			&:hover {
+				color: $default;
+			}
+		}
+	}
+	
+	&__list {
+		margin-top: 10rem;
+	}
+	
+	&__item {
+		padding: 6rem 0;
+		border-bottom: 1px solid $gray;
+	}
+	
+	&__checkbox {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		justify-content: space-between;
+		padding-left: 11rem;
+		position: relative;
+		&.new {
+			&:before {
+				color: $default;
+			}
+			.notifications__checkbox-date {
+				font-weight: 500;
+			}
+		}
+		&:before {
+			content: '•';
+			display: block;
+			font-weight: 500;
+			transition: ease .15s;
+			color: $gray;
+			position: absolute;
+			left: 0;
+			top: 2rem;
+		}
+		&-input {
+			display: none;
+			&:checked + .notifications__checkbox {
+				&-text {
+					font-weight: 500;
+					& + .notifications__checkbox-date {
+						font-weight: 500;
+						& + .notifications__checkbox-delete + .notifications__checkbox-icon {
+							fill: $default;
+						}
+					}
+				}
+			}
+		}
+		&-text {
+			width: 100%;
+		}
+		&-date {
+			display: block;
+			width: 60rem;
+			min-width: 60rem;
+			text-align: center;
+			margin-left: 15rem;
+		}
+		&-delete {
+			color: $gray;
+			margin-left: 10rem;
+			transition: ease .15s;
+			font-weight: normal;
+			&:hover {
+				color: $default;
+			}
+		}
+		&-icon {
+			width: 12rem;
+			height: 24rem;
+			min-width: 12rem;
+			fill: $gray;
+			margin-left: 10rem;
+		}
+		&:hover {
+			font-weight: 500;
+		}
+	}
+	
+	@include max-screen($small_mobile) {
+		&__title {
+			font-size: 24rem;
+		}
+		&__nav {
+			font-size: 18rem;
+		}
+		
+		&__checkbox {
+			&-delete {
+				display: none;
+			}
+			&-date {
+				margin-left: 0;
+			}
+		}
+	}
+	
+	@include max-screen(359px) {
+		&__nav {
+			font-size: 16rem;
+			&-item {
+				&:not(:last-child) {
+					margin-right: 15rem;
+				}
+			}
+		}
+	}
+}
