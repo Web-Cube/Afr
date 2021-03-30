@@ -21,6 +21,34 @@
 			transition: ease .2s;
 			display: none;
 		}
+		&-title {
+			&.gray {
+				color: $gray;
+			}
+		}
+	}
+	
+	&__label {
+		display: block;
+		color: $gray;
+		font-size: 14rem;
+		line-height: 16/14*1;
+		font-weight: 300;
+		margin-bottom: 4rem;
+	}
+	
+	&__desc, &__content {
+		font-size: 14rem;
+		line-height: 16/14*1;
+		font-weight: bold;
+	}
+	
+	&__content {
+		margin-top: 10rem;
+	}
+	
+	&__social {
+		margin-top: 10rem;
 	}
 	
 	&__ava {
@@ -36,6 +64,16 @@
 			overflow: hidden;
 			border-radius: 100%;
 		}
+	}
+	
+	&__button-mess {
+		width: 137rem;
+		margin-right: 10rem;
+	}
+	
+	&__link {
+		font-size: 14rem;
+		line-height: 16/14*1;
 	}
 	
 	&__load {
@@ -133,6 +171,24 @@
 		}
 	}
 	
+	.mobile-show {
+		display: none;
+	}
+	
+	&__action {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 10rem;
+		&-btn {
+			width: 30rem;
+			height: 30rem;
+			&:not(:last-child) {
+				margin-right: 26rem;
+			}
+		}
+	}
+	
 	@include max-screen($small_tablet) {
 		&__top {
 			display: none;
@@ -161,6 +217,10 @@
 				.personal__section-arrow {
 					transform: rotate(180deg);
 				}
+			}
+			&.gray {
+				border-bottom: 0;
+				margin-top: 20rem;
 			}
 		}
 		&__buttons {
@@ -239,6 +299,23 @@
 			}
 			&_col4 {
 				width: calc( 25% - 3rem );
+			}
+		}
+		&__section {
+			&.gray {
+				margin-top: 15rem;
+			}
+		}
+		.mobile-hide {
+			display: none!important;
+		}
+		.mobile-show {
+			display: block;
+		}
+		
+		&__ava {
+			&.user {
+				justify-content: center;
 			}
 		}
 	}

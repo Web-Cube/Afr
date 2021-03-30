@@ -77,7 +77,6 @@
 	height: 24rem;
 	font-size: 14rem;
 	line-height: 16/14*1;
-	color: #fff;
 	background: $default;
 	color: $base;
 	font-weight: bold;
@@ -113,6 +112,31 @@
 		position: absolute;
 		right: 10rem;
 		top: 5rem;
+	}
+}
+
+.button-border {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+	cursor: pointer;
+	font-family: 'Ubuntu';
+	line-height: 1;
+	height: 24rem;
+	font-size: 14rem;
+	line-height: 16/14*1;
+	color: #fff;
+	background: none;
+	color: $default;
+	border: 1px solid $default;
+	font-weight: bold;
+	padding: 0 30rem;
+	border-radius: 20rem;
+	transition: ease .15s;
+	&:hover {
+		background: $default;
+		color: $base;
 	}
 }
 
