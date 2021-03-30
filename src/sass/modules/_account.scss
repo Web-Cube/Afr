@@ -233,6 +233,11 @@
 		margin: auto;
 	}
 	
+	&__change-password {
+		max-width: 440rem;
+		margin: auto;
+	}
+	
 	@include max-screen($small_tablet) {
 		&__column {
 			&_left {
