@@ -79,6 +79,12 @@
 	&__load {
 		position: relative;
 		margin-right: 10rem;
+		cursor: pointer;
+		&:hover {
+			.personal__load-btn {
+				background: $gray;
+			}
+		}
 		&-input {
 			position: absolute;
 			left: 0;

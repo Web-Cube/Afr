@@ -50,13 +50,19 @@ body {
 	line-height: 21/18*1;
 	color: $default;
 	background: $base;
-	&.js-lock {
-		overflow-x: hidden;
-		overflow-y: scroll;
+	&.is-lock {
+		overflow: hidden;
+		margin-right: 15px;
 	}
 	&.is-black {
 		background: #171717;
 		color: #fff;
+	}
+	
+	@include max-screen($large_tablet) {
+		&.is-lock {
+			margin-right: 0;
+		}
 	}
 	
 	@include max-screen($small_mobile) {

@@ -70,14 +70,14 @@
 		&.new {
 			&:before {
 				content: '•';
-				font-size: 36rem;
+				font-size: 24rem;
 				line-height: 1;
 				font-weight: bold;
 				display: block;
 				position: absolute;
-				left: -22rem;
+				left: -20rem;
 				top: 50%;
-				margin-top: -18rem;
+				margin-top: -12rem;
 			}
 		}
 		&-left, &-right {
@@ -158,6 +158,36 @@
 		height: 30rem;
 	}
 	
+	&__btn-filter {
+		display: none;
+	}
+	
+	&__filter {
+		margin-top: 15rem;
+		&-row {
+			margin-left: -10rem;
+		}
+		&-column {
+			width: calc( 33.33% - 10rem );
+			margin-left: 10rem;
+			margin-top: 3rem;
+		}
+		&-label {
+			padding-left: 12rem;
+			font-size: 14rem;
+			line-height: 16/14*1;
+			font-weight: 300;
+			color: $gray;
+		}
+		& + .friends__nav {
+			margin-top: 10rem;
+		}
+	}
+	
+	&__select {
+		width: 100%;
+	}
+	
 	@include max-screen($small_tablet) {
 		&__list {
 			margin-left: 10rem;
@@ -197,6 +227,11 @@
 			}
 		}
 		
+		&__btn-filter {
+			display: inline-flex;
+			width: 46%;
+		}
+		
 		&__search-btn {
 			display: block;
 		}
@@ -217,6 +252,10 @@
 			justify-content: space-between;
 			width: 100%;
 			font-size: 18rem;
+		}
+		
+		&__filter {
+			display: none;
 		}
 	}
 }

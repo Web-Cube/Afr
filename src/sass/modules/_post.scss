@@ -161,6 +161,12 @@
 			font-weight: bold;
 			display: block;
 			color: $gray;
+			transition: ease .2s;
+		}
+		&:hover {
+			.post__single-name {
+				color: #fff;
+			}
 		}
 	}
 	

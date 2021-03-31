@@ -1,7 +1,7 @@
 extends ../layouts/base
 
 append vars
-	- title = 'Friends';
+	- title = 'Chat';
 
 block content
 	+b.head-page.hide
@@ -91,86 +91,217 @@ block content
 					+e.logout
 						a(href="#") Log out
 				+e.column._center
-					+e.friends.friends__
+					+e.chat.chat__
 						+e.top
-							+e.title.h3 Friends
-							+e.A.search-btn(href="#")
-								+icon('search')
-							+e.A.button.button(href="#") Find new friends
-						+e.action
-							+e.nav
-								+e.nav-item
-									+e.nav-link.is-active(href="#") All
-								+e.nav-item
-									+e.nav-link(href="#") Online 1
-								+e.nav-item
-									+e.nav-link(href="#") Request+1
-							+e.search-form.search-form__._small
-								+e.field.field__
-									+e.INPUT.input(type="text", name="search" placeholder="Search friend")
-								+e.BUTTON.btn
-									+icon('search')
-						+e.list
-							+e.item.new
-								+e.item-left
-									+e.A.ava(href="#")
-										img.object-fit(src="/img/ava6.jpg")
-									+e.info
-										strong Alan Cooper 
-										em 27 years 
-										br
-										strong.gray From: 
-										em Canada 
-										br
-										strong.gray Now: 
-										| Kyiv, Ukraine
-								+e.item-right
-									+e.A.item-btn.button-border.mobile-hide(href="#") Message
-									+e.A.delete.mobile-hide(href="#") Delete
-									+e.A.item-mess.mobile-show(href="#")
-										+icon('email')
-									+e.A.item-user.mobile-show(href="#")
-										+icon('userFriend')
-							+e.item
-								+e.item-left
-									+e.A.ava(href="#")
-										img.object-fit(src="/img/ava7.jpg")
-									+e.info
-										strong Simon Boang 
-										em 24 years 
-										br
-										strong.gray From: 
-										em Canada 
-										br
-										strong.gray Now: 
-										| Kyiv, Ukraine
-								+e.item-right
-									+e.A.item-btn.button-border.mobile-hide(href="#") Message
-									+e.A.delete.mobile-hide(href="#") Delete
-									+e.A.item-mess.mobile-show(href="#")
-										+icon('email')
-									+e.A.item-user.mobile-show(href="#")
-										+icon('userFriend')
-							+e.item
-								+e.item-left
-									+e.A.ava(href="#")
-										img.object-fit(src="/img/ava5.jpg")
-									+e.info
-										strong Anna Kurt 
-										em 21 years 
-										br
-										strong.gray From: 
-										em Canada 
-										br
-										strong.gray Now: 
-										| Kyiv, Ukraine
-								+e.item-right
-									+e.A.item-btn.button-border.mobile-hide(href="#") Message
-									+e.A.delete.mobile-hide(href="#") Delete
-									+e.A.item-mess.mobile-show(href="#")
-										+icon('email')
-									+e.A.item-user.mobile-show(href="#")
-										+icon('userFriend')
+							+e.A.back(href="#")
+								+icon('prev')
+							+e.A.user(href="#")
+								+e.ava
+									img.object-fit(src="/img/ava6.jpg")
+								+e.name Alan Cooper 
+								+e.online •Online
+						+e.body
+							+e.date
+								+e.date-text 29.01.2021
+							+e.left
+								+e.ava
+									img.object-fit(src="/img/ava6.jpg")
+								+e.box
+									+e.list
+										+e.item
+											+e.desc Hey! How are you? 
+									+e.box-bottom
+										+e.box-date 13:54:41
+							+e.right
+								+e.box
+									+e.list
+										+e.desc Hi! All is well! And you?
+									+e.box-bottom
+										+e.box-status Read
+										+e.box-date 14:11:18
+							+e.left
+								+e.ava
+									img.object-fit(src="/img/ava6.jpg")
+								+e.box
+									+e.list
+										+e.item
+											+e.desc I’m fine!
+										+e.item
+											+e.desc Can you give me your phone number?
+									+e.box-bottom
+										+e.box-date 15:09:04
+							+e.right
+								+e.box
+									+e.list
+										+e.desc Ok! 088-11-11-111
+									+e.box-bottom
+										+e.box-status Read
+										+e.box-date 18:13:57
+							+e.date
+								+e.date-text Today
+							+e.left
+								+e.ava
+									img.object-fit(src="/img/ava6.jpg")
+								+e.box
+									+e.list
+										+e.item
+											+e.desc
+												strong Hi! How are you?
+									+e.box-bottom
+										+e.box-date 15:09:04
+							+e.date
+								+e.date-text 29.01.2021
+							+e.left
+								+e.ava
+									img.object-fit(src="/img/ava6.jpg")
+								+e.box
+									+e.list
+										+e.item
+											+e.desc Hey! How are you? 
+									+e.box-bottom
+										+e.box-date 13:54:41
+							+e.right
+								+e.box
+									+e.list
+										+e.desc Hi! All is well! And you?
+									+e.box-bottom
+										+e.box-status Read
+										+e.box-date 14:11:18
+							+e.left
+								+e.ava
+									img.object-fit(src="/img/ava6.jpg")
+								+e.box
+									+e.list
+										+e.item
+											+e.desc I’m fine!
+										+e.item
+											+e.desc Can you give me your phone number?
+									+e.box-bottom
+										+e.box-date 15:09:04
+							+e.right
+								+e.box
+									+e.list
+										+e.desc Ok! 088-11-11-111
+									+e.box-bottom
+										+e.box-status Read
+										+e.box-date 18:13:57
+							+e.date
+								+e.date-text Today
+							+e.left
+								+e.ava
+									img.object-fit(src="/img/ava6.jpg")
+								+e.box
+									+e.list
+										+e.item
+											+e.desc
+												strong Hi! How are you?
+									+e.box-bottom
+										+e.box-date 15:09:04
+							+e.date
+								+e.date-text 29.01.2021
+							+e.left
+								+e.ava
+									img.object-fit(src="/img/ava6.jpg")
+								+e.box
+									+e.list
+										+e.item
+											+e.desc Hey! How are you? 
+									+e.box-bottom
+										+e.box-date 13:54:41
+							+e.right
+								+e.box
+									+e.list
+										+e.desc Hi! All is well! And you?
+									+e.box-bottom
+										+e.box-status Read
+										+e.box-date 14:11:18
+							+e.left
+								+e.ava
+									img.object-fit(src="/img/ava6.jpg")
+								+e.box
+									+e.list
+										+e.item
+											+e.desc I’m fine!
+										+e.item
+											+e.desc Can you give me your phone number?
+									+e.box-bottom
+										+e.box-date 15:09:04
+							+e.right
+								+e.box
+									+e.list
+										+e.desc Ok! 088-11-11-111
+									+e.box-bottom
+										+e.box-status Read
+										+e.box-date 18:13:57
+							+e.date
+								+e.date-text Today
+							+e.left
+								+e.ava
+									img.object-fit(src="/img/ava6.jpg")
+								+e.box
+									+e.list
+										+e.item
+											+e.desc
+												strong Hi! How are you?
+									+e.box-bottom
+										+e.box-date 15:09:04
+							+e.date
+								+e.date-text 29.01.2021
+							+e.left
+								+e.ava
+									img.object-fit(src="/img/ava6.jpg")
+								+e.box
+									+e.list
+										+e.item
+											+e.desc Hey! How are you? 
+									+e.box-bottom
+										+e.box-date 13:54:41
+							+e.right
+								+e.box
+									+e.list
+										+e.desc Hi! All is well! And you?
+									+e.box-bottom
+										+e.box-status Read
+										+e.box-date 14:11:18
+							+e.left
+								+e.ava
+									img.object-fit(src="/img/ava6.jpg")
+								+e.box
+									+e.list
+										+e.item
+											+e.desc I’m fine!
+										+e.item
+											+e.desc Can you give me your phone number?
+									+e.box-bottom
+										+e.box-date 15:09:04
+							+e.right
+								+e.box
+									+e.list
+										+e.desc Ok! 088-11-11-111
+									+e.box-bottom
+										+e.box-status Read
+										+e.box-date 18:13:57
+							+e.date
+								+e.date-text Today
+							+e.left
+								+e.ava
+									img.object-fit(src="/img/ava6.jpg")
+								+e.box
+									+e.list
+										+e.item
+											+e.desc
+												strong Hi! How are you?
+									+e.box-bottom
+										+e.box-date 15:09:04
+						+e.bottom
+							+b.FORM.comments-form(action="#")
+								+e.add
+									+e.INPUT.add-input(type="file")
+									+e.add-icon +
+								+e.field
+									+e.TEXTAREA.input(placeholder="Enter your message")
+									+e.BUTTON.btn
+										+icon('send')
 				+e.column._right
 					+e.exchange.exchange__
 						+e.title.h4 Exchange Rates to UAH

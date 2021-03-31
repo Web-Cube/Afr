@@ -4,6 +4,10 @@
 		width: 30rem;
 		height: 30rem;
 		fill: $default;
+		transition: ease .2s;
+		&:hover {
+			fill: $gray;
+		}
 		&:not(:last-child) {
 			margin-right: 10rem;
 		}

@@ -1,5 +1,8 @@
 .field {
 	position: relative;
+	&_age {
+		display: flex;
+	}
 	&__input {
 		font-size: 14rem;
 		line-height: 16/14*1;
@@ -15,6 +18,16 @@
 		&::placeholder {
 			color: #989898;
 		}
+		&_center {
+			text-align: center;
+		}
+	}
+	
+	&__separator {
+		font-size: 24rem;
+		line-height: 1;
+		font-weight: 300;
+		margin: 0 2px;
 	}
 	
 	&__textarea {
@@ -40,6 +53,10 @@
 		position: absolute;
 		bottom: 8rem;
 		right: 14rem;
+		transition: ease .2s;
+		&:hover {
+			color: $gray;
+		}
 	}
 	
 	&__pass {

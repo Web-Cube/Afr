@@ -24,12 +24,12 @@ var defaults = {
 		
 		$('.js-mobile-close').click(function(){
 			$('.js-mobile').removeClass('is-active');
-			$('html').removeClass('is-lock');
+			$('body').removeClass('is-lock');
 		});
 		
 		$('.js-mobile-show').click(function(){
 			$('.js-mobile').addClass('is-active');
-			$('html').addClass('is-lock');
+			$('body').addClass('is-lock');
 		});
 		
 	},

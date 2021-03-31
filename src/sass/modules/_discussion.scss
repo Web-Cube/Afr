@@ -99,6 +99,21 @@
 				font-weight: bold;
 			}
 		}
+		&-desc {
+			margin-bottom: 10rem;
+		}
+	}
+	
+	&_post {
+		margin-top: 0;
+		padding-bottom: 20rem;
+		.discussion {
+			&__error {
+				border-top: 1px solid $default;
+				padding-top: 20rem;
+				padding-bottom: 0;
+			}
+		}
 	}
 	
 	@include max-screen($small_tablet) {
@@ -118,6 +133,14 @@
 			}
 			&-btn {
 				margin-top: 10rem;
+			}
+		}
+		&_post {
+			.discussion {
+				&__error {
+					border-top: 0;
+					padding-top: 0;
+				}
 			}
 		}
 	}

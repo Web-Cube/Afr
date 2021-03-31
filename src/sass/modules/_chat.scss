@@ -1,0 +1,186 @@
+.chat {
+	position: relative;
+	margin-left: 5rem;
+	margin-right: 5rem;
+	margin-top: -10rem;
+	font-size: 14rem;
+	line-height: 16/14*1;
+	&__top {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid $default;
+		padding-bottom: 9rem;
+	}
+	
+	&__back {
+		display: none;
+	}
+	
+	&__body {
+		overflow-x: hidden;
+		overflow-y: auto;
+		height: calc( 100vh - 380rem );
+		margin-top: 10rem;
+		margin-bottom: 10rem;
+		padding: 10rem 10rem 10rem 0;
+		&::-webkit-scrollbar {
+			width: 4px;
+			background: $gray;
+			border-radius: 2px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: $default;
+			border-radius: 2px;
+		}
+	}
+	
+	&__user {
+		display: flex;
+		align-items: center;
+	}
+	
+	&__name {
+		font-weight: bold;
+		margin-left: 10rem;
+	}
+	
+	&__online {
+		margin-left: 12rem;
+		font-weight: bold;
+		color: $gray;
+	}
+	
+	&__ava {
+		position: relative;
+		overflow: hidden;
+		display: block;
+		width: 30rem;
+		min-width: 30rem;
+		height: 30rem;
+		border-radius: 100%;
+	}
+	
+	&__date {
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+		font-weight: bold;
+		color: $gray;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:not(:first-child) {
+			margin-top: 10rem;
+		}
+		&-text {
+			display: inline-flex;
+			position: relative;
+			min-width: 90rem;
+			text-align: center;
+			justify-content: center;
+			padding: 0 10rem;
+			&:before, &:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				margin-top: -1px;
+				width: 1000px;
+				height: 1px;
+				background: $gray;
+			}
+			&:before {
+				right: 100%;
+			}
+			&:after {
+				left: 100%;
+			}
+		}
+	}
+	
+	&__left, &__right {
+		display: flex;
+		&:not(:first-child) {
+			margin-top: 10rem;
+		}
+		.chat__ava {
+			margin-top: 5rem;
+			margin-right: 10rem;
+		}
+	}
+	&__right {
+		justify-content: flex-end;
+	}
+	
+	&__desc {
+		background: none;
+		border: 1px solid #fff;
+		box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.25);
+		border-radius: 20rem;
+		padding: 12rem 10rem;
+		border-radius: 20rem;
+		min-width: 135rem;
+		display: inline-flex;
+	}
+	
+	&__item {
+		&:not(:first-child) {
+			margin-top: 10rem;
+		}
+	}
+	
+	&__box {
+		&-bottom {
+			font-size: 10px;
+			line-height: 11px;
+			font-weight: 500;
+			color: $gray;
+			text-align: right;
+			position: relative;
+			padding-right: 20rem;
+		}
+		&-status {
+			position: absolute;
+			left: 20rem;
+			top: 0;
+		}
+	}
+	
+	.comments-form {
+		&__input {
+			font-style: normal;
+			padding-left: 10rem;
+		}
+	}
+	
+	@include max-screen($small_tablet) {
+		margin-left: 0;
+		margin-right: 0;
+		&__body {
+			height: calc( 100vh - 310rem );
+		}
+	}
+	
+	@include max-screen($small_mobile) {
+		margin-top: 0;
+		&__back {
+			display: block;
+			width: 24rem;
+			height: 24rem;
+			margin-right: 15rem;
+		}
+		&__body {
+			height: calc( 100vh - 185rem );
+		}
+		.comments-form {
+			&__input {
+				height: 30rem;
+				padding-left: 35rem;
+			}
+			&__btn {
+				border-left: 0;
+			}
+		}
+	}
+}

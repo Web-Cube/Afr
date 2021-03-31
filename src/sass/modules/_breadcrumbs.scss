@@ -23,6 +23,13 @@
 		display: none;
 	}
 	
+	a {
+		transition: ease .2s;
+		&:hover {
+			color: $default;
+		}
+	}
+	
 	@include max-screen($small_mobile) {
 		font-weight: bold;
 		padding-top: 0;

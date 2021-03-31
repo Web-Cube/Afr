@@ -1,7 +1,7 @@
 extends ../layouts/base
 
 append vars
-	- title = 'Friends';
+	- title = 'Friends filter';
 
 block content
 	+b.head-page.hide
@@ -93,23 +93,58 @@ block content
 				+e.column._center
 					+e.friends.friends__
 						+e.top
-							+e.title.h3 Friends
-							+e.A.search-btn(href="#")
-								+icon('search')
-							+e.A.button.button(href="#") Find new friends
-						+e.action
-							+e.nav
-								+e.nav-item
-									+e.nav-link.is-active(href="#") All
-								+e.nav-item
-									+e.nav-link(href="#") Online 1
-								+e.nav-item
-									+e.nav-link(href="#") Request+1
-							+e.search-form.search-form__._small
+							+e.title.h3 Afrua people
+							+e.A.btn-filter.button-filter__(href="#")
+								+e.text Filter
+								+e.icon
+									+icon('filter')
+						+e.filter
+							+e.search-form.search-form__
 								+e.field.field__
-									+e.INPUT.input(type="text", name="search" placeholder="Search friend")
+									+e.INPUT.input(type="text", name="search" placeholder="Search people")
 								+e.BUTTON.btn
 									+icon('search')
+							+e.filter-row.flex
+								+e.filter-column
+									+e.filter-label From
+									+e.select.select__.js-select
+										+e.INPUT.input.js-select-input(type="hidden" value="Great Britain")
+										+e.head.js-select-head
+											+e.label.js-select-label Great Britain
+											+e.arrow
+												+icon('downArrow')
+										+e.body
+											+e.list
+												+e.item.js-select-item.is-active(data-value="Great Britain") Great Britain
+												+e.item.js-select-item(data-value="Ukraine") Ukraine
+												+e.item.js-select-item(data-value="USA") USA
+								+e.filter-column
+									+e.filter-label Ukraine city
+									+e.select.select__.js-select
+										+e.INPUT.input.js-select-input(type="hidden" value="All")
+										+e.head.js-select-head
+											+e.label.js-select-label All
+											+e.arrow
+												+icon('downArrow')
+										+e.body
+											+e.list
+												+e.item.js-select-item.is-active(data-value="Great Britain") All
+												+e.item.js-select-item(data-value="Ukraine") Kyiv
+												+e.item.js-select-item(data-value="Kharkiv") Kharkiv
+												+e.item.js-select-item(data-value="Lviv") Lviv
+								+e.filter-column
+									+e.filter-label Years
+									+e.field.field__._age
+										+e.INPUT.input._center(type="number" value="18")
+										+e.separator -
+										+e.INPUT.input._center(type="number" value="45")
+						+e.nav
+							+e.nav-item
+								+e.nav-link(href="#") All 3451
+							+e.nav-item
+								+e.nav-link.is-active(href="#") Online 3
+							+e.nav-item
+								+e.nav-link(href="#") Friends 3
 						+e.list
 							+e.item.new
 								+e.item-left
@@ -131,7 +166,7 @@ block content
 										+icon('email')
 									+e.A.item-user.mobile-show(href="#")
 										+icon('userFriend')
-							+e.item
+							+e.item.new
 								+e.item-left
 									+e.A.ava(href="#")
 										img.object-fit(src="/img/ava7.jpg")
@@ -146,12 +181,12 @@ block content
 										| Kyiv, Ukraine
 								+e.item-right
 									+e.A.item-btn.button-border.mobile-hide(href="#") Message
-									+e.A.delete.mobile-hide(href="#") Delete
+									+e.A.add.mobile-hide(href="#") Add
 									+e.A.item-mess.mobile-show(href="#")
 										+icon('email')
 									+e.A.item-user.mobile-show(href="#")
-										+icon('userFriend')
-							+e.item
+										+icon('userAdd')
+							+e.item.new
 								+e.item-left
 									+e.A.ava(href="#")
 										img.object-fit(src="/img/ava5.jpg")
@@ -166,11 +201,11 @@ block content
 										| Kyiv, Ukraine
 								+e.item-right
 									+e.A.item-btn.button-border.mobile-hide(href="#") Message
-									+e.A.delete.mobile-hide(href="#") Delete
+									+e.A.add.mobile-hide(href="#") Add
 									+e.A.item-mess.mobile-show(href="#")
 										+icon('email')
 									+e.A.item-user.mobile-show(href="#")
-										+icon('userFriend')
+										+icon('userAdd')
 				+e.column._right
 					+e.exchange.exchange__
 						+e.title.h4 Exchange Rates to UAH

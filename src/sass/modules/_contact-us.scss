@@ -1,5 +1,6 @@
 .contact-us {
 	padding: 15rem 0 55rem 0;
+	overflow: hidden;
 	&__title {
 		margin-bottom: 10rem;
 	}
@@ -47,6 +48,7 @@
 			width: 50rem;
 			min-width: 50rem;
 			margin-right: 15rem;
+			fill: $default;
 		}
 	}
 	
